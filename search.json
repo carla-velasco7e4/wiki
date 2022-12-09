@@ -336,6 +336,27 @@
     "text": "Object-Oriented Programming with Java, part I Week 1\nObject-Oriented Programming with Java, part I Week 2\nObject-Oriented Programming with Java, part I Week 3\nObject-Oriented Programming with Java, part I Week 4\nObject-Oriented Programming with Java, part I Week 5\nObject-Oriented Programming with Java, part I Week 6"
   },
   {
+    "objectID": "javase/resources.html#books",
+    "href": "javase/resources.html#books",
+    "title": "Java SE Resources",
+    "section": "Books",
+    "text": "Books\n\nDesign Patterns: Elements of Reusable Object-Oriented Software Erich Gamma; Richard Helm; Ralph Johnson; John Vlissides"
+  },
+  {
+    "objectID": "javase/resources.html#web",
+    "href": "javase/resources.html#web",
+    "title": "Java SE Resources",
+    "section": "Web",
+    "text": "Web\n\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg"
+  },
+  {
+    "objectID": "javase/resources.html#youtube",
+    "href": "javase/resources.html#youtube",
+    "title": "Java SE Resources",
+    "section": "Youtube",
+    "text": "Youtube"
+  },
+  {
     "objectID": "javase/seabstraction.html",
     "href": "javase/seabstraction.html",
     "title": "Java SE: Abstraction",
@@ -380,7 +401,7 @@
   {
     "objectID": "javase/sebuilder.html",
     "href": "javase/sebuilder.html",
-    "title": "Java Desing-patterns: Builder",
+    "title": "Java Design-patterns: Builder",
     "section": "",
     "text": "About this site"
   },
@@ -394,7 +415,7 @@
   {
     "objectID": "javase/sefactory.html",
     "href": "javase/sefactory.html",
-    "title": "Java Desing-patterns: Factory",
+    "title": "Java Design-patterns: Factory",
     "section": "",
     "text": "About this site"
   },
@@ -457,7 +478,7 @@
   {
     "objectID": "javase/seobserver.html",
     "href": "javase/seobserver.html",
-    "title": "Java Desing-patterns: Observer",
+    "title": "Java Design-patterns: Observer",
     "section": "",
     "text": "About this site"
   },
@@ -466,7 +487,14 @@
     "href": "javase/sepatterns.html",
     "title": "Java SE Design-Patterns",
     "section": "",
-    "text": "About this site"
+    "text": "In Java, a design pattern is a general repeatable solution to a commonly occurring problem in software design. A design pattern is not a finished design that can be transformed directly into code, but rather it is a description or template that can be used to solve a problem that is commonly encountered in software development.\n\n\nThere are many different design patterns that have been identified and documented, and each pattern provides a different solution to a specific problem.\nSome of the most important design patterns in Java include:\n\nthe factory pattern,\nthe observer pattern,\nthe singleton pattern,\nand the builder pattern.\n\nThese patterns are commonly used in Java because they provide solutions to common problems that are encountered in software development, and they can help to make your code more efficient, reusable, and maintainable."
+  },
+  {
+    "objectID": "javase/sepatterns.html#design-patterns-cheat-sheet",
+    "href": "javase/sepatterns.html#design-patterns-cheat-sheet",
+    "title": "Java SE Design-Patterns",
+    "section": "Design Patterns Cheat-sheet",
+    "text": "Design Patterns Cheat-sheet\n\n\n\nDesign Patterns Cheat-sheet"
   },
   {
     "objectID": "javase/sepolymorphism.html",
@@ -485,7 +513,7 @@
   {
     "objectID": "javase/sesingleton.html",
     "href": "javase/sesingleton.html",
-    "title": "Java Desing-patterns: Singleton",
+    "title": "Java Design-patterns: Singleton",
     "section": "",
     "text": "The singleton pattern is a design pattern in computer programming and Java that is used to restrict the instantiation of a class to one “single” instance.\n\n\nThis is useful when you want to make sure that only one object of a particular class is created, because this can be helpful for managing resources and ensuring that your program is running as efficiently as possible.\nIn Java, the singleton pattern can be implemented by creating a private constructor for the class, which prevents other objects from creating instances of the class.\nThe class also typically provides a static method that allows other classes to access the single instance of the class, which is created the first time the static method is called. This ensures that only one instance of the class is created, and that all other classes can access this instance easily.\n\n\n\nSingleton Pattern"
   },
