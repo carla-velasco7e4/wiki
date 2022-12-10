@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>albertprofe wiki - Lab 4: subject</title>
+<title>albertprofe wiki - Lab 4: Spring Boot Projects JPA Inherence strategies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,7 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Lab 4: subject</h1>
+      <h1 class="quarto-secondary-nav-title">Lab 4: Spring Boot Projects <code>JPA Inherence</code> strategies</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -224,22 +224,22 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/sblab1.html" class="sidebar-item-text sidebar-link">Lab 1: subject</a>
+  <a href="../springboot/sblab1.html" class="sidebar-item-text sidebar-link">Lab 1: Spring Boot Projects</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/sblab2.html" class="sidebar-item-text sidebar-link">Lab 2: subject</a>
+  <a href="../springboot/sblab2.html" class="sidebar-item-text sidebar-link">Lab 2: Spring Boot Projects</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/sblab3.html" class="sidebar-item-text sidebar-link">Lab 3: subject</a>
+  <a href="../springboot/sblab3.html" class="sidebar-item-text sidebar-link">Lab 3: Spring Boot Projects</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/sblab4.html" class="sidebar-item-text sidebar-link active">Lab 4: subject</a>
+  <a href="../springboot/sblab4.html" class="sidebar-item-text sidebar-link active">Lab 4: Spring Boot Projects <code>JPA Inherence</code> strategies</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,14 +270,29 @@ cookieconsent.run({
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#spring-boot-projects-jpa-inherence-strategies" id="toc-spring-boot-projects-jpa-inherence-strategies" class="nav-link active" data-scroll-target="#spring-boot-projects-jpa-inherence-strategies">Spring Boot Projects <code>JPA Inherence</code> strategies</a></li>
+  <li><a href="#inhrence-with-jpa-and-uml" id="toc-inhrence-with-jpa-and-uml" class="nav-link" data-scroll-target="#inhrence-with-jpa-and-uml">Inhrence with <code>JPA</code> and <code>UML</code></a>
+  <ul>
+  <li><a href="#entity-inhrence-jpa" id="toc-entity-inhrence-jpa" class="nav-link" data-scroll-target="#entity-inhrence-jpa">(0) <code>@Entity</code> Inhrence JPA</a></li>
+  <li><a href="#mappedsuperclass-inhrence-jpa" id="toc-mappedsuperclass-inhrence-jpa" class="nav-link" data-scroll-target="#mappedsuperclass-inhrence-jpa">(1) <code>MappedSuperclass</code> Inhrence JPA</a></li>
+  <li><a href="#single-table-with-discriminator-inhrence-jpa" id="toc-single-table-with-discriminator-inhrence-jpa" class="nav-link" data-scroll-target="#single-table-with-discriminator-inhrence-jpa">(2) <code>Single Table with Discriminator</code> Inhrence JPA</a></li>
+  <li><a href="#joined-table-inhrence-jpa" id="toc-joined-table-inhrence-jpa" class="nav-link" data-scroll-target="#joined-table-inhrence-jpa">(3) <code>Joined Table</code> Inhrence JPA</a></li>
+  <li><a href="#table-per-class-inhrence-jpa" id="toc-table-per-class-inhrence-jpa" class="nav-link" data-scroll-target="#table-per-class-inhrence-jpa">(4) <code>Table per class</code> Inhrence JPA</a></li>
+  <li><a href="#basic-spring-boot-project" id="toc-basic-spring-boot-project" class="nav-link" data-scroll-target="#basic-spring-boot-project">(0) Basic Spring Boot project</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/springboot/sblab4.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Lab 4: subject</h1>
+<h1 class="title d-none d-lg-block">Lab 4: Spring Boot Projects <code>JPA Inherence</code> strategies</h1>
 </div>
 
 
@@ -292,9 +307,394 @@ cookieconsent.run({
 
 </header>
 
-<p>About this site</p>
+<p>Welcome to the cifojava2022-6 wiki!</p>
+<section id="spring-boot-projects-jpa-inherence-strategies" class="level1">
+<h1>Spring Boot Projects <code>JPA Inherence</code> strategies</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>universalPlanes</td>
+<td>Server</td>
+<td>Basic Spring Boot Project</td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/universalplanes">Done</a></td>
+</tr>
+<tr class="even">
+<td>JpaInherenceLibrary</td>
+<td>Server-Inherence</td>
+<td>Inhrence with <code>JPA</code> and <code>UML</code> <span class="citation" data-cites="Entity">@Entity</span></td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary">Done</a></td>
+</tr>
+<tr class="odd">
+<td>JpaInherenceLibrary1</td>
+<td>Server-Inherence</td>
+<td>Inhrence with <code>JPA</code> and <code>UML</code> <strong>MappedSuperClass</strong></td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary1">Done</a></td>
+</tr>
+<tr class="even">
+<td>JpaInherenceLibrary2</td>
+<td>Server-Inherence</td>
+<td>Inhrence with <code>JPA</code> and <code>UML</code> <strong>Single Table with Discriminator</strong></td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary2">Done</a></td>
+</tr>
+<tr class="odd">
+<td>JpaInherenceLibrary3</td>
+<td>Server-Inherence</td>
+<td>Inhrence with <code>JPA</code> and <code>UML</code> <strong>Joined Table</strong></td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary3">Done</a></td>
+</tr>
+<tr class="even">
+<td>JpaInherenceLibrary4</td>
+<td>Server-Inherence</td>
+<td>Inhrence with <code>JPA</code> and <code>UML</code> <strong>Table per class</strong></td>
+<td><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary4">Done</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>there is no <span class="citation" data-cites="Service">@Service</span> neither <span class="citation" data-cites="Controller">@Controller</span></li>
+<li>so, they are basically back-end projects</li>
+<li>all work with <span class="citation" data-cites="CrudRepository">@CrudRepository</span></li>
+</ul>
+<hr>
+</section>
+<section id="inhrence-with-jpa-and-uml" class="level1">
+<h1>Inhrence with <code>JPA</code> and <code>UML</code></h1>
+<p><strong>Inheritance</strong> is a fundamental concept of POO, but Relational databases <strong>have no concept of inheritance</strong> neither NoSQL (MongoDB, DymamoDB), so persisting <a href="https://en.wikibooks.org/wiki/Java_Persistence/Inheritance">inheritance</a> in a SQL and NoSQL database <em>has its own particular way.</em></p>
+<blockquote class="blockquote">
+<p>Because relational databases have no concept of inheritance, there is no standard way of implementing inheritance in database, <em>so the hardest part of persisting inheritance is choosing how to represent the inheritance in the database.</em></p>
+</blockquote>
+<p>JPA defines several inheritance mechanisms, mainly defined though the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/Inheritance.html"><span class="citation" data-cites="Inheritance">@Inheritance</span></a> annotation or the <code>&lt;inheritance&gt;</code> element.</p>
+<p>There are <strong>three inheritance strategies</strong> defined from the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/InheritanceType.html">InheritanceType</a> <code>enum</code>:</p>
+<ol type="1">
+<li>SINGLE_TABLE</li>
+<li>TABLE_PER_CLASS</li>
+<li>JOINED</li>
+</ol>
+<ul>
+<li>Single table inheritance is the default with discriminator values,</li>
+<li>and table per class is an optional feature of the JPA spec, <strong>so not all providers may support it</strong>.</li>
+<li>in joined strategy each class in the hierarchy is mapped to its table.</li>
+</ul>
+<p>MAPPED SUPERCLASS</p>
+<ul>
+<li>JPA also defines a mapped superclass concept defined through the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/MappedSuperclass.html"><span class="citation" data-cites="MappedSuperclass">@MappedSuperclass</span></a> annotation or the <code>&lt;mapped-superclass&gt;</code> element.</li>
+<li>A mapped superclass <strong>is not a persistent class</strong>, but allows common mappings to be defined for its subclasses.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://drive.google.com/uc?id=1zDupRF_e-Sr7ZpBo8tPw5uQI79RDS-vh.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Entity Inheritance</figcaption><p></p>
+</figure>
+</div>
+<p>Links: <a href="https://orientdb.com/docs/2.2.x/Teleporter-Table-Per-Concrete-Class-Inheritance.html">orientdb</a>, <a href="https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/mapped-super-class.html">logicbig</a>, <a href="https://en.wikibooks.org/wiki/Java_Persistence/Inheritance">Java Persistence/Inheritance wikibooks</a> and <a href="https://openjpa.apache.org/builds/2.2.0/apache-openjpa/docs/jpa_overview_mapping_inher.html">apache</a></p>
+<section id="entity-inhrence-jpa" class="level2">
+<h2 class="anchored" data-anchor-id="entity-inhrence-jpa">(0) <code>@Entity</code> Inhrence JPA</h2>
+<details>
+<summary>
+JpaInherenceLibrary0
+</summary>
+<ul>
+<li>Base project:
+<ul>
+<li>POM</li>
+<li><span class="citation" data-cites="Entity">@Entity</span>: <code>Book</code> (SuperClass), <code>ItemBook</code>, <code>RareBook</code> and <code>Auhtor</code></li>
+<li><code>n:m</code> : <code>Book</code>&lt;&gt; <code>Auhtor</code></li>
+<li>DataBase H2: application.properties</li>
+<li>Command Line Runner with methods to test</li>
+<li><span class="citation" data-cites="CrudRepository">@CrudRepository</span> JPA 2.0, <span class="citation" data-cites="Component">@Component</span> (<code>CommandLineRunner</code>) and <span class="citation" data-cites="Test">@Test</span> (<code>Jupiter</code>)</li>
+</ul></li>
+<li>New Topics
+<ul>
+<li><p>How to code <code>inherence</code> and JPA uses <strong>SINGLE_TABLE strategy by default</strong></p>
+<pre><code>  @Entity
+  public class Book {}
 
 
+  @Entity(name="BookItem")
+  public class ItemBook extends Book {
+
+     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+     @JoinTable(name = "AUTHOR_BOOK_JOIN_TABLE",
+               joinColumns = { @JoinColumn(name = "AUTHOR_FK" )},
+               inverseJoinColumns = { @JoinColumn(name = "BOOK_FK" )})
+     private Set&lt;Author&gt;authors = new HashSet&lt;Author&gt;();
+  }
+
+
+  @Entity(name="RareItem")
+  public class RareItem extends Book {}
+
+
+  @Entity(name="Author")
+  @Table(name="AUTHOR_TABLE")
+  public class Author {}</code></pre></li>
+</ul></li>
+<li>Versions
+<ul>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary">JpaInherenceLibrary v 1.1</a> : without <span class="citation" data-cites="MappedSuperClass">@MappedSuperClass</span> and <span class="citation" data-cites="Entity">@Entity</span> superclass, <strong>Single Table strategy is applied BY DEFAULT</strong></li>
+</ul></li>
+</ul>
+</details>
+</section>
+<section id="mappedsuperclass-inhrence-jpa" class="level2">
+<h2 class="anchored" data-anchor-id="mappedsuperclass-inhrence-jpa">(1) <code>MappedSuperclass</code> Inhrence JPA</h2>
+<details>
+<summary>
+JpaInherenceLibrary1
+</summary>
+<ul>
+<li>Base project:
+<ul>
+<li>POM</li>
+<li><span class="citation" data-cites="Entity">@Entity</span>: <code>ItemBook</code>, <code>RareBook</code> and <code>Auhtor</code></li>
+<li>Non-<span class="citation" data-cites="Entity">@Entity</span>: <code>Book</code></li>
+<li>DataBase H2: application.properties</li>
+<li>Command Line Runner with methods to test</li>
+<li><span class="citation" data-cites="CrudRepository">@CrudRepository</span> JPA 2.0, <span class="citation" data-cites="Component">@Component</span> (<code>CommandLineRunner</code>) and <span class="citation" data-cites="Test">@Test</span> (<code>Jupiter</code>)</li>
+</ul></li>
+<li>New Topics
+<ul>
+<li><p>How <strong>can not</strong> we code <code>@MappedSuperclass</code> and <code>@ManyToMany</code> <strong>author</strong></p>
+<pre><code>  @MappedSuperclass
+  public abstract class Book {}
+
+
+  @Entity(name="BookItem")
+  @Table(name="ITEM_BOOK_TABLE")
+  public class ItemBook extends Book {
+
+     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+     @JoinTable(name = "AUTHOR_BOOK_JOIN_TABLE",
+                 joinColumns = { @JoinColumn(name = "AUTHOR_FK" )},
+                 inverseJoinColumns = { @JoinColumn(name = "BOOK_FK" )})
+     private Set&lt;Author&gt;authors = new HashSet&lt;Author&gt;();
+  }
+
+
+  @Entity(name="RareItem")
+  @Table(name="RARE_ITEM_TABLE")
+  public class RareItem extends Book {}
+
+
+  @Entity(name="Author")
+  @Table(name="AUTHOR_TABLE")
+  public class Author {}</code></pre></li>
+<li><p>With <span class="citation" data-cites="MappedSuperclass">@MappedSuperclass</span> <strong>any relationship can’t be done</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://drive.google.com/uc?id=1r5X1ZnGXb_e-nobKxviNFDpA2eNW_D-2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">With <span class="citation" data-cites="MappedSuperclass">@MappedSuperclass</span></figcaption><p></p>
+</figure>
+</div></li>
+<li><p>With <span class="citation" data-cites="MappedSuperclass">@MappedSuperclass</span>, one SuperClass and two SubClasses:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://drive.google.com/uc?id=1t3Z1Xx1nH2v2FkSMaG_J8cIij4RV_3gd.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">With <span class="citation" data-cites="MappedSuperclass">@MappedSuperclass</span></figcaption><p></p>
+</figure>
+</div></li>
+</ul></li>
+<li>Versions
+<ul>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary1">JpaInherenceLibrary1 v 1.0</a> : not using <code>author</code> just inherence without relatonship <span class="citation" data-cites="ManyToMany">@ManyToMany</span></li>
+</ul></li>
+</ul>
+</details>
+</section>
+<section id="single-table-with-discriminator-inhrence-jpa" class="level2">
+<h2 class="anchored" data-anchor-id="single-table-with-discriminator-inhrence-jpa">(2) <code>Single Table with Discriminator</code> Inhrence JPA</h2>
+<details>
+<summary>
+JpaInherenceLibrary2
+</summary>
+<ul>
+<li><p>Base project:</p>
+<ul>
+<li>POM</li>
+<li><span class="citation" data-cites="Entity">@Entity</span>: <code>Book</code> (SuperClass), <code>ItemBook</code>, <code>RareBook</code> and <code>Auhtor</code></li>
+<li><code>n:m</code> : <code>Book</code>&lt;&gt; <code>Auhtor</code></li>
+<li>DataBase H2 : application.properties</li>
+<li>Command Line Runner with methods to test</li>
+<li><span class="citation" data-cites="CrudRepository">@CrudRepository</span> JPA 2.0, <span class="citation" data-cites="Component">@Component</span> (<code>CommandLineRunner</code>) and <span class="citation" data-cites="Test">@Test</span> (<code>Jupiter</code>)</li>
+</ul></li>
+<li><p>New Topics</p>
+<ul>
+<li><p>How to code <code>@Inheritance(strategy = InheritanceType.SINGLE_TABLE)</code></p>
+<pre><code>   @Entity
+   @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+   @DiscriminatorColumn(name="BOOK_TYPE", 
+         discriminatorType = DiscriminatorType.STRING)
+   public class Book {}
+
+
+  @Entity(name="BookItem")
+  @Table(name="BOOK_ITEM_TABLE")
+  @DiscriminatorValue(value= "ITEMBOOK")
+  public class BookItem extends Book {
+
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinTable(name = "AUTHOR_BOOK_JOIN_TABLE",
+         joinColumns = { @JoinColumn(name = "AUTHOR_FK" )},
+         inverseJoinColumns = { @JoinColumn(name = "BOOK_FK" )})
+  private Set&lt;Author&gt;authors = new HashSet&lt;Author&gt;();}
+
+
+  @Entity(name="RareItem")
+  @Table(name="RARE_ITEM_TABLE")
+  @DiscriminatorValue(value= "REAREBOOK")
+  public class RareItem extends Book {}
+
+
+  @Entity(name="Author")
+  @Table(name="AUTHOR_TABLE")
+  public class Author {}</code></pre></li>
+</ul></li>
+<li><p>With <span class="citation" data-cites="Inheritance">@Inheritance</span> and <strong>SINGLE_TABLE</strong></p>
+<pre><code>![@Inheritance ]( https://drive.google.com/uc?id=18nfiKnQaim4-lTD21iBwy313Daxtv73H)</code></pre></li>
+</ul>
+<p><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary2">version 1.1</a> : JpaInherenceLibrary2, SINGLE_TABLE strategy</p>
+</details>
+</section>
+<section id="joined-table-inhrence-jpa" class="level2">
+<h2 class="anchored" data-anchor-id="joined-table-inhrence-jpa">(3) <code>Joined Table</code> Inhrence JPA</h2>
+<details>
+<summary>
+JpaInherenceLibrary3
+</summary>
+<ul>
+<li><p>Base project:</p>
+<ul>
+<li>POM</li>
+<li><span class="citation" data-cites="Entity">@Entity</span>: <code>Book</code> (SuperClass), <code>ItemBook</code>, <code>RareBook</code> and <code>Auhtor</code></li>
+<li><code>n:m</code> : <code>Book</code>&lt;&gt; <code>Auhtor</code></li>
+<li>DataBase H2 : application.properties</li>
+<li>Command Line Runner with methods to test</li>
+<li><span class="citation" data-cites="CrudRepository">@CrudRepository</span> JPA 2.0, <span class="citation" data-cites="Component">@Component</span> (<code>CommandLineRunner</code>) and <span class="citation" data-cites="Test">@Test</span> (<code>Jupiter</code>)</li>
+</ul></li>
+<li><p>New Topics</p>
+<ul>
+<li><p>How to code <code>@Inheritance(strategy = InheritanceType.JOINED)</code></p>
+<pre><code>  @Entity
+  @Table(name="BOOK_TABLE")
+  @Inheritance(strategy = InheritanceType.JOINED)
+  @DiscriminatorColumn(name="BOOK_TYPE",
+         discriminatorType = DiscriminatorType.STRING)
+  public class Book {}
+
+
+  @Entity(name="BookItem")
+  @Table(name="BOOK_ITEM_TABLE")
+  @PrimaryKeyJoinColumn(name = "bookItemId")
+  @DiscriminatorValue(value= "ITEMBOOK")
+  public class BookItem extends Book {
+
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinTable(name = "AUTHOR_BOOK_JOIN_TABLE",
+         joinColumns = { @JoinColumn(name = "AUTHOR_FK" )},
+         inverseJoinColumns = { @JoinColumn(name = "BOOK_FK" )})
+  private Set&lt;Author&gt;authors = new HashSet&lt;Author&gt;();}
+
+
+  @Entity(name="RareItem")
+  @Table(name="RARE_ITEM_TABLE")
+  @PrimaryKeyJoinColumn(name = "rareItemId")
+  @DiscriminatorValue(value= "RAREBOOK")
+  public class RareItem extends Book {}
+
+
+  @Entity(name="Author")
+  @Table(name="AUTHOR_TABLE")
+  public class Author {}</code></pre></li>
+</ul></li>
+<li><p>With <span class="citation" data-cites="Inheritance">@Inheritance</span> and <strong>JOINED</strong></p>
+<pre><code>![@Inheritance JOINED](https://drive.google.com/uc?id=1BpxaW7fV_kh4PyFWn3i49nG4SqnKYpAE)</code></pre></li>
+</ul>
+<a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary3">verison 1.1</a> : JpaInherenceLibrary3
+</details>
+</section>
+<section id="table-per-class-inhrence-jpa" class="level2">
+<h2 class="anchored" data-anchor-id="table-per-class-inhrence-jpa">(4) <code>Table per class</code> Inhrence JPA</h2>
+<details>
+<summary>
+JpaInherenceLibrary4
+</summary>
+<ul>
+<li>Base project:
+<ul>
+<li>POM</li>
+<li><span class="citation" data-cites="Entity">@Entity</span>: <code>Book</code> (SuperClass), <code>ItemBook</code>, <code>RareBook</code> and <code>Auhtor</code></li>
+<li><code>n:m</code> : <code>Book</code>&lt;&gt; <code>Auhtor</code></li>
+<li>DataBase H2 : application.properties</li>
+<li>Command Line Runner with methods to test</li>
+<li><span class="citation" data-cites="CrudRepository">@CrudRepository</span> JPA 2.0, <span class="citation" data-cites="Component">@Component</span> (<code>CommandLineRunner</code>) and <span class="citation" data-cites="Test">@Test</span> (<code>Jupiter</code>)</li>
+</ul></li>
+<li>New Topics
+<ul>
+<li><p>How to code <code>@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)</code></p>
+<pre><code>  @Entity
+  @Table(name="BOOK_TABLE")
+  @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+  public class Book {}
+
+
+  @Entity(name="BookItem")
+  @Table(name="BOOK_ITEM_TABLE")
+  public class BookItem extends Book {
+
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinTable(name = "AUTHOR_BOOK_JOIN_TABLE",
+       joinColumns = { @JoinColumn(name = "AUTHOR_FK" )},
+       inverseJoinColumns = { @JoinColumn(name = "BOOK_FK" )})
+  private Set&lt;Author&gt;authors = new HashSet&lt;Author&gt;();}
+
+
+  @Entity(name="RareItem")
+  @Table(name="RARE_ITEM_TABLE")
+  public class RareItem extends Book {}
+
+
+  @Entity(name="Author")
+  @Table(name="AUTHOR_TABLE")
+  public class Author {}</code></pre></li>
+</ul></li>
+<li>With <span class="citation" data-cites="Inheritance">@Inheritance</span> and <strong>TABLE_PER_CLASS</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://drive.google.com/uc?id=1ixCe2sRmIsS_9w7bPkmcdyBZmhKa3GtX.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><span class="citation" data-cites="Inheritance">@Inheritance</span> TABLE PER CLASS</figcaption><p></p>
+</figure>
+</div>
+<a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/jpainherencelibrary4">version 1.1</a> : JpaInherenceLibrary4
+</details>
+<hr>
+</section>
+<section id="basic-spring-boot-project" class="level2">
+<h2 class="anchored" data-anchor-id="basic-spring-boot-project">(0) Basic Spring Boot project</h2>
+<details>
+<summary>
+Universal Planes
+</summary>
+<ul>
+<li>Preliminary works:
+<ul>
+<li>Create project on <a href="https://start.spring.io/">Spring Init</a></li>
+</ul></li>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-6/tree/main/universalplanes">version 1.0</a> : spring boot executions</li>
+</ul>
+</details>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

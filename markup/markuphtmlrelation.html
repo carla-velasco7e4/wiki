@@ -322,7 +322,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markup/mulab1.html" class="sidebar-item-text sidebar-link">Lab 1: Create and publish by Quarto</a>
+  <a href="../markup/mulab1.html" class="sidebar-item-text sidebar-link">Lab#MD01-1: Create and publish by Quarto</a>
   </div>
 </li>
       </ul>
@@ -354,7 +354,13 @@ cookieconsent.run({
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#problems" id="toc-problems" class="nav-link" data-scroll-target="#problems">Problems</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
+  <li><a href="#example-creating-navigation-tabs" id="toc-example-creating-navigation-tabs" class="nav-link" data-scroll-target="#example-creating-navigation-tabs">Example: creating navigation TABs</a>
+  <ul>
+  <li><a href="#approach-1-md-css" id="toc-approach-1-md-css" class="nav-link" data-scroll-target="#approach-1-md-css">Approach #1: MD + CSS</a></li>
+  <li><a href="#approach-2-html-css" id="toc-approach-2-html-css" class="nav-link" data-scroll-target="#approach-2-html-css">Approach #2: HTML + CSS</a></li>
+  <li><a href="#approach-3-html-css-js" id="toc-approach-3-html-css-js" class="nav-link" data-scroll-target="#approach-3-html-css-js">Approach #3: HTML + CSS + JS</a></li>
+  <li><a href="#approach-4-if-it-is-able-to-import-mdreadme" id="toc-approach-4-if-it-is-able-to-import-mdreadme" class="nav-link" data-scroll-target="#approach-4-if-it-is-able-to-import-mdreadme">Approach #4: if it is able to import MDReadme</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/markup/markuphtmlrelation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -389,20 +395,22 @@ cookieconsent.run({
 <section id="problems" class="level2">
 <h2 class="anchored" data-anchor-id="problems">Problems</h2>
 <ul>
-<li><p><strong>Danger</strong>: If the HTML and Markdown are not properly formatted or nested, the resulting document may not be readable or display correctly. This can lead to confusion for readers and make the document difficult to understand.</p></li>
-<li><p><strong>Perils</strong>: Mixing HTML and Markdown can make it difficult to maintain the document, as changes to one language may affect the other. This can result in errors and inconsistencies, and make it more challenging to update the document over time.</p></li>
+<li><p><strong>Display</strong>: If the HTML and Markdown are not properly formatted or nested, the resulting document may not be readable or display correctly. This can lead to confusion for readers and make the document difficult to understand.</p></li>
+<li><p><strong>Maintain</strong>: Mixing HTML and Markdown can make it difficult to maintain the document, as changes to one language may affect the other. This can result in errors and inconsistencies, and make it more challenging to update the document over time.</p></li>
 <li><p><strong>Incompatibilities</strong>: Different Markdown parsers and HTML renderers may have different interpretations of the mixed language, leading to differences in how the document is displayed or interpreted. This can cause confusion for readers and make it difficult to ensure that the document is consistently displayed across different platforms.</p></li>
 </ul>
 </section>
-<section id="example-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-1">Example 1</h2>
+<section id="example-creating-navigation-tabs" class="level2">
+<h2 class="anchored" data-anchor-id="example-creating-navigation-tabs">Example: creating navigation TABs</h2>
+<section id="approach-1-md-css" class="level3">
+<h3 class="anchored" data-anchor-id="approach-1-md-css">Approach #1: MD + CSS</h3>
 <div class="callout-note callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Lab 1: Publishing website by Quarto engine
+Lab#01-1: Publishing website by Quarto engine
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -496,7 +504,19 @@ Lab 1: Publishing website by Quarto engine
 </div>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false  collapse="false"}</span>
+<div class="callout-warning callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Markdown callouts with calls to CSS classes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-info icon=false  collapse="false"}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lab 1: Publishing website by Quarto engine</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>::: {.tab-nav}</span>
@@ -610,8 +630,54 @@ Lab 1: Publishing website by Quarto engine
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="approach-2-html-css" class="level3">
+<h3 class="anchored" data-anchor-id="approach-2-html-css">Approach #2: HTML + CSS</h3>
+<p><a href="../markup/mulab1.html">Lab statement on Lab#01-1: Create and publish by Quarto</a></p>
+</section>
+<section id="approach-3-html-css-js" class="level3">
+<h3 class="anchored" data-anchor-id="approach-3-html-css-js">Approach #3: HTML + CSS + JS</h3>
+<p>From <code>w3.css</code>: <a href="https://www.w3schools.com/w3css/w3css_tabulators.asp">W3.CSS Navigation Tabs</a></p>
+<p><a href="../javase/selab1-2.html">Lab statement on Lab#02-2: Maven/Gradle Person and Account stored in JSON</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">openLab</span>(evt<span class="op">,</span> labStep) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> i<span class="op">,</span> tabcontent<span class="op">,</span> tablinks<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  tabcontent <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByClassName</span>(<span class="st">"tabcontentw3"</span>)<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> tabcontent<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    tabcontent[i]<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"none"</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  tablinks <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByClassName</span>(<span class="st">"tablinks"</span>)<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> tablinks<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    tablinks[i]<span class="op">.</span><span class="at">className</span> <span class="op">=</span> tablinks[i]<span class="op">.</span><span class="at">className</span><span class="op">.</span><span class="fu">replace</span>(<span class="st">" active"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(labStep)<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"block"</span><span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  evt<span class="op">.</span><span class="at">currentTarget</span><span class="op">.</span><span class="at">className</span> <span class="op">+=</span> <span class="st">" active"</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="approach-4-if-it-is-able-to-import-mdreadme" class="level3">
+<h3 class="anchored" data-anchor-id="approach-4-if-it-is-able-to-import-mdreadme">Approach #4: if it is able to import MDReadme</h3>
+<p><a href="https://docs.readme.com/rdmd/docs/code-blocks">Code Blocks</a></p>
+<p><strong>Syntax</strong></p>
+<p>We offer both classic single code blocks, as well as a tabbed interface for displaying multiple code blocks concisely! These are written nearly identically to a series of vanilla markdown code snippets, except for their distinct lack of an additional line break separating each subsequent block:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>javascript I<span class="st">'m A tab</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'Code Tab A'</span>)<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>javascript I<span class="st">'m tab B</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'Code Tab B'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Custom CSS</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.markdown-body</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-background</span>: <span class="cn">#e3dcef</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-text</span>: <span class="cn">#4a2b7b</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-tabs</span>: <span class="cn">#c6b8dd</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
