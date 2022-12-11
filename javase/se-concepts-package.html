@@ -424,6 +424,7 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#package-in-java-se-or-java-ee-is-not-similiar" id="toc-package-in-java-se-or-java-ee-is-not-similiar" class="nav-link" data-scroll-target="#package-in-java-se-or-java-ee-is-not-similiar">Package in Java SE or Java EE is not similiar</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/javase/se-concepts-package.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -470,6 +471,26 @@ cookieconsent.run({
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In this example, the <code>Main</code> class uses the <code>com.example.Example</code> class by specifying the fully-qualified class name, which includes the package name as well as the class name. This allows the <code>Main</code> class to access the <code>Example</code> class from within the <code>com.example</code> package.</p>
+</section>
+<section id="package-in-java-se-or-java-ee-is-not-similiar" class="level2">
+<h2 class="anchored" data-anchor-id="package-in-java-se-or-java-ee-is-not-similiar">Package in Java SE or Java EE is not similiar</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The package that a class is placed in can be an important factor in <strong>how the framework resolves requests</strong>. This is because the <mark>Spring Framework uses the package structure of a project to help determine the path of a request, and to map the request to the appropriate controller or handler</mark>.</p>
+</div>
+</div>
+<p>For example, consider a Spring MVC application that contains a <code>com.example.web</code> package, which contains a <code>HomeController</code> class that is used to handle requests to the application’s home page. In this case, the <code>HomeController</code> class is placed in the <code>com.example.web</code> package, which means that the path of a request to the home page would include the package name as part of the URL.</p>
+<p>For instance, if the application’s base URL is <code>http://localhost:8080</code>, then a request to the home page might have a URL like the following:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">http://localhost:8080/com.example.web/home</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case, the <code>com.example.web</code> package is part of the path that resolves the request to the <code>HomeController</code> class, which is responsible for handling the request and generating a response.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
