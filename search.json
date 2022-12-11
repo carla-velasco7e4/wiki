@@ -347,7 +347,7 @@
     "href": "javase/resources.html#web",
     "title": "Java SE Resources",
     "section": "Web",
-    "text": "Web\n\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg"
+    "text": "Web\n\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg\nJava Oracle Official Documentation The Java™ Tutorials\nStackOverFlow Is Java “pass-by-reference” or “pass-by-value”?"
   },
   {
     "objectID": "javase/resources.html#youtube",
@@ -355,6 +355,13 @@
     "title": "Java SE Resources",
     "section": "Youtube",
     "text": "Youtube"
+  },
+  {
+    "objectID": "javase/seabstractfactory.html",
+    "href": "javase/seabstractfactory.html",
+    "title": "Java SE Patterns: Abstract Factory",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "javase/seabstraction.html",
@@ -415,9 +422,37 @@
   {
     "objectID": "javase/sebuilder.html",
     "href": "javase/sebuilder.html",
-    "title": "Java Design-patterns: Builder",
+    "title": "Java Patterns: Builder",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "javase/secoupling.html",
+    "href": "javase/secoupling.html",
+    "title": "Java SE: Coupling/Cohesion",
+    "section": "",
+    "text": "Coupling refers to the degree to which one class or module depends on another class or module.\nHigh/tight coupling means that one class or module depends heavily on another class or module, while low/loose coupling means that one class or module has minimal dependencies on other classes or modules.\nCoupling and decoupling are fundamental in modern Java applied to microservices.\nCoupling refers to the degree of dependence, decoupling, on the other hand, refers to the process of reducing the degree of coupling between different classes or modules in a system. By decoupling classes or modules, you can make the system more modular, scalable, flexible, and maintainable."
+  },
+  {
+    "objectID": "javase/secoupling.html#key-concept",
+    "href": "javase/secoupling.html#key-concept",
+    "title": "Java SE: Coupling/Cohesion",
+    "section": "Key-concept",
+    "text": "Key-concept\nThe importance of decoupling in Java lies in its ability to improve the modularity, flexibility, and maintainability of a system. When classes or modules are highly coupled, changes to one class or module can have a cascading effect on other classes or modules, which can make the system difficult to modify and maintain. By decoupling classes or modules, you can reduce the dependencies between them, which can make the system more modular and easier to modify and maintain.\n\n\n\nCoupling and cohesion by Евгений Мирошниченко, CC0, via Wikimedia Commons\n\n\nAdditionally, decoupling can help to improve the reusability of classes or modules. When classes or modules are highly coupled, it can be difficult to reuse them in other contexts or situations. By decoupling classes or modules, you can make them more self-contained and independent, which can make them more easily reusable in other contexts."
+  },
+  {
+    "objectID": "javase/secoupling.html#example-carfactory",
+    "href": "javase/secoupling.html#example-carfactory",
+    "title": "Java SE: Coupling/Cohesion",
+    "section": "Example: CarFactory",
+    "text": "Example: CarFactory\nHere is an example of decoupling in Java, using a CarFactory class to create different types of cars:\npublic class CarFactory {\n    // Private constructor to prevent instantiation\n    private CarFactory() { }\n\n    // Factory method for creating cars\n    public static Car createCar(String type) {\n        switch (type) {\n            case \"sedan\":\n                return new Sedan(\"Toyota\", \"Camry\", 2019);\n            case \"hatchback\":\n                return new Hatchback(\"Honda\", \"Fit\", 2019);\n            case \"suv\":\n                return new SUV(\"Jeep\", \"Grand Cherokee\", 2019);\n            default:\n                throw new IllegalArgumentException(\"Invalid car type: \" + type);\n        }\n    }\n}\nIn this example, the CarFactory class defines a createCar() method, which is marked as public and static. This method is the factory method, which is responsible for creating objects of the Car type. The createCar() method takes a type parameter, which specifies the type of car to create, and returns an instance of the appropriate concrete class.\nBy decoupling the CarFactory class from the code that uses the cars, you can make the code that uses the cars more flexible and reusable. For example, you could define a CarDriver class that takes a Car object as a parameter, and uses the Car object to drive the car. Because the CarDriver class doesn’t depend on the CarFactory class, you can use the CarDriver class to drive any type of car, regardless of how the car was created.\nAdditionally, by decoupling the CarFactory class from the code that uses the cars, you can make the logic for creating the cars more modular and maintainable. For example, if you want to add a new type of car, such as a truck, you can simply add a new Truck class that extends the Car class, and then update the CarFactory class to include logic for creating instances of the Truck class. Because the CarFactory class is decoupled from the code that uses the cars, you don’t have to change any other code in the system in order to add the new car type."
+  },
+  {
+    "objectID": "javase/secoupling.html#conclusion",
+    "href": "javase/secoupling.html#conclusion",
+    "title": "Java SE: Coupling/Cohesion",
+    "section": "Conclusion",
+    "text": "Conclusion\nOverall, decoupling is an important concept in Java programming, and can help to improve the modularity, flexibility, and maintainability of a system. By reducing the dependencies between classes or modules, you can make the system more modular and easier to modify and maintain, and you can improve the reusability of individual classes or modules."
   },
   {
     "objectID": "javase/seencapsulation.html",
@@ -429,21 +464,21 @@
   {
     "objectID": "javase/sefactory.html",
     "href": "javase/sefactory.html",
-    "title": "Java Design-patterns: Factory",
+    "title": "Java Patterns: Factory",
     "section": "",
     "text": "The factory pattern is a design pattern that is used to create objects in a structured and standardized way. The factory pattern defines a factory method, which is a method that is responsible for creating objects of a specific type.\n\nThe factory pattern is useful when you want to centralize the logic for creating objects, and to provide a consistent and standard way of creating objects of different types. This can help to reduce duplication of code, and to make the code more maintainable and extensible.\nIn the context of the factory pattern, decoupling refers to the idea of separating the logic for creating objects from the code that uses those objects. By decoupling these two aspects of the system, you can make the code that uses the objects more flexible and reusable, and you can make the logic for creating the objects more modular and maintainable."
   },
   {
     "objectID": "javase/sefactory.html#example-carfactory",
     "href": "javase/sefactory.html#example-carfactory",
-    "title": "Java Design-patterns: Factory",
+    "title": "Java Patterns: Factory",
     "section": "Example CarFactory",
     "text": "Example CarFactory\nHere is an example of how to implement the factory pattern in Java, using a CarFactory class to create different types of cars:\npublic class CarFactory {\n    // Private constructor to prevent instantiation\n    private CarFactory() { }\n\n    // Factory method for creating cars\n    public static Car createCar(String type) {\n        switch (type) {\n            case \"sedan\":\n                return new Sedan(\"Toyota\", \"Camry\", 2019);\n            case \"hatchback\":\n                return new Hatchback(\"Honda\", \"Fit\", 2019);\n            case \"suv\":\n                return new SUV(\"Jeep\", \"Grand Cherokee\", 2019);\n            default:\n                throw new IllegalArgumentException(\"Invalid car type: \" + type);\n        }\n    }\n}\nIn this example, the CarFactory class defines a createCar() method, which is marked as public and static. This method is the factory method, which is responsible for creating objects of the Car type.\nThe createCar() method takes a type parameter, which specifies the type of car to create. Depending on the value of the type parameter, the createCar() method creates and returns an instance of the Sedan, Hatchback, or SUV class.\nTo use the CarFactory class, you would call the createCar() method, passing in the type of car.\nUsing the @Data annotation from the Lombok library to automatically generate getters, setters, and constructors for the Sedan, Hatchback, and SUV classes:\n // Sedan class\n    @Data\n    public static class Sedan implements Car {\n        private String make;\n        private String model;\n        private int year;\n    }\n// Hatchback class\n    @Data\n    public static class Hatchback implements Car {\n        private String make;\n        private String model;\n        private int year;\n    }\n// SUV class\n    @Data\n    public static class SUV implements Car {\n        private String make;\n        private String model;\n        private int year;\n    }\nIn this example, the CarFactory class defines a createCar() method, which is marked as public and static. This method is the factory method, which is responsible for creating objects of the Car type.\nThe createCar() method takes a type parameter, which specifies the type of car to create. Depending on the value of the type parameter, the createCar() method creates and returns an instance of the Sedan, Hatchback, or SUV class.\nThe Sedan, Hatchback, and SUV classes are nested classes inside the CarFactory class. Each of these classes is marked with the @Data annotation from the Lombok library, which generates the appropriate getters, setters, and constructors for the class. This means that you don’t have to write these methods manually, which can save a lot of time and effort.\nTo use the CarFactory class, you would call the createCar() method, passing in the type of car you want to create. For example:\nCar sedan = CarFactory.createCar(\"sedan\");\nThis code would create and return an instance of the Sedan class, with the specified make, model, and year."
   },
   {
     "objectID": "javase/sefactory.html#carfactory-decoupling",
     "href": "javase/sefactory.html#carfactory-decoupling",
-    "title": "Java Design-patterns: Factory",
+    "title": "Java Patterns: Factory",
     "section": "CarFactory decoupling",
     "text": "CarFactory decoupling\nThe factory pattern is often used in conjunction with the concept of decoupling, which is the idea of separating different components or aspects of a system in order to make the system more modular, flexible, and maintainable.\nBy decoupling the CarFactory class from the code that uses the cars, you can make the code that uses the cars more flexible and reusable. For example, you could define a CarDriver class that takes a Car object as a parameter, and uses the `"
   },
@@ -518,9 +553,51 @@
     "text": "About this site"
   },
   {
+    "objectID": "javase/seobjects.html",
+    "href": "javase/seobjects.html",
+    "title": "Java SE: Objects",
+    "section": "",
+    "text": "from The Java™ Tutorials\nAs you know, a class provides the blueprint for objects; you create an object from a class. Each of the following statements taken from the CreateObjectDemo program creates an object and assigns it to a variable:\nPoint originOne = new Point(23, 94);\nRectangle rectOne = new Rectangle(originOne, 100, 200);\nRectangle rectTwo = new Rectangle(50, 100);\nThe first line creates an object of the Point class, and the second and third lines each create an object of the Rectangle class.\nEach of these statements has three parts (discussed in detail below):\n\nDeclaration: The code set in bold are all variable declarations that associate a variable name with an object type.\nInstantiation: The new keyword is a Java operator that creates the object.\nInitialization: The new operator is followed by a call to a constructor, which initializes the new object."
+  },
+  {
+    "objectID": "javase/seobjects.html#declaring-a-variable-to-refer-to-an-object",
+    "href": "javase/seobjects.html#declaring-a-variable-to-refer-to-an-object",
+    "title": "Java SE: Objects",
+    "section": "Declaring a Variable to Refer to an Object",
+    "text": "Declaring a Variable to Refer to an Object\nPreviously, you learned that to declare a variable, you write:\ntype name;\nThis notifies the compiler that you will use name to refer to data whose type is type. With a primitive variable, this declaration also reserves the proper amount of memory for the variable.\nYou can also declare a reference variable on its own line. For example:\nPoint originOne;\n\n\n\n\n\n\nJust a reference variable: is empty\n\n\n\nIf you declare originOne like this, its value will be undetermined until an object is actually created and assigned to it. Simply declaring a reference variable does not create an object.\n\n\nFor that, you need to use the new operator, as described in the next section. You must assign an object to originOne before you use it in your code. Otherwise, you will get a compiler error.\nA variable in this state, which currently references no object, can be illustrated as follows (the variable name, originOne, plus a reference pointing to nothing):\noriginOne –> null\n\n\n\n“originOne –> null” figure part 1"
+  },
+  {
+    "objectID": "javase/seobjects.html#instantiating-a-class",
+    "href": "javase/seobjects.html#instantiating-a-class",
+    "title": "Java SE: Objects",
+    "section": "Instantiating a Class",
+    "text": "Instantiating a Class\n\nThe new operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The new operator also invokes the object constructor.\n\n\n\n\n\n\n\nInstantiating a class\n\n\n\nThe phrase “instantiating a class” means the same thing as “creating an object.” When you create an object, you are creating an “instance” of a class, therefore “instantiating” a class.\nThe new operator requires a single, postfix argument: a call to a constructor. The name of the constructor provides the name of the class to instantiate.\n\n\nThe new operator returns a reference to the object it created. This reference is usually assigned to a variable of the appropriate type, like:\nPoint originOne = new Point(23, 94);\noriginOne –> Point object\n\n\n\n“originOne –> Point object” figure part 2\n\n\nThe reference returned by the new operator does not have to be assigned to a variable. It can also be used directly in an expression. For example:\nint height = new Rectangle().height;\nThis statement will be discussed in the next section or you can go here."
+  },
+  {
+    "objectID": "javase/seobjects.html#initializing-an-object",
+    "href": "javase/seobjects.html#initializing-an-object",
+    "title": "Java SE: Objects",
+    "section": "Initializing an Object",
+    "text": "Initializing an Object\nHere’s the code for the Point class:\npublic class Point {\n    public int x = 0;\n    public int y = 0;\n    //constructor\n    public Point(int a, int b) {\n        x = a;\n        y = b;\n    }\n}\nThis class contains a single constructor. You can recognize a constructor because its declaration uses the same name as the class and it has no return type.\nThe constructor in the Point class takes two integer arguments, as declared by the code (int a, int b). The following statement provides 23 and 94 as values for those arguments:\nPoint originOne = new Point(23, 94);"
+  },
+  {
+    "objectID": "javase/seobjects.html#example-uml-class-and-object",
+    "href": "javase/seobjects.html#example-uml-class-and-object",
+    "title": "Java SE: Objects",
+    "section": "Example UML: class and object",
+    "text": "Example UML: class and object\n\n\n\nThe class body may contain member variables, constructors, public methods, private helper methods and others."
+  },
+  {
     "objectID": "javase/seobserver.html",
     "href": "javase/seobserver.html",
-    "title": "Java Design-patterns: Observer",
+    "title": "Java Patterns: Observer",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "javase/sepackage.html",
+    "href": "javase/sepackage.html",
+    "title": "Java SE: Packages",
     "section": "",
     "text": "About this site"
   },
@@ -560,23 +637,51 @@
     "text": "Java SE Basic Principles OOP\n\n\nObject-oriented programming (OOP) is a programming paradigm that is based on the concept of objects, which can contain data and code that manipulates that data. OOP is based on several key principles, including the following:\n\nEncapsulation: Encapsulation refers to the idea of combining data and the code that manipulates that data into a single unit, or object. This allows for better organization and modularity of code, and helps to hide the internal details of an object from other parts of the program.\nAbstraction: Abstraction is the process of representing essential features without including the details. In OOP, abstraction is often achieved through the use of interfaces or abstract classes, which define a set of common methods that can be implemented by different classes in different ways. This allows for greater flexibility and reusability of code.\nInheritance: Inheritance is the ability of a class to inherit the attributes and behaviors of another class. In OOP, a class can inherit from a parent class, also known as a superclass, and can override or extend the methods of the parent class to add new functionality. This allows for code reuse and makes it easier to create hierarchies of classes.\nPolymorphism: Polymorphism is the ability of an object to take on multiple forms. In OOP, polymorphism allows for the use of a single interface to refer to objects of different types. This allows for greater flexibility and code reuse, as the same method can be used on objects of different types and the appropriate implementation will be called based on the type of the object.\n\nOverall, the principles of encapsulation, abstraction, inheritance, and polymorphism are fundamental to OOP and form the basis for many of its benefits, such as modularity, flexibility, code reuse, and ease of maintenance.\n\n\n\n\n\nExample object in Java\n\n\nIn object-oriented programming (OOP), an object is a self-contained unit that combines data and the code that manipulates that data.\nAn object is a data structure that contains:\n\nattributes, or properties, that describe the object, defines the state’s object\nand methods, or functions, that define the behavior of the object.\n\nObjects can interact with each other by sending and receiving messages, or method calls, to access and modify their data.\nObjects are created from classes, which are templates that define the structure and behavior of objects.\nIn Java, objects are created using the new keyword, and their attributes and methods can be accessed using the dot (.) operator. Objects are an important concept in OOP and are central to many of its benefits, such as modularity, code reuse, and flexibility.\n\nPerson carla = new Person(\"Carla\", 21, \"red hair\", 45.000);\n\n\n\nIn object-oriented programming (OOP):\n\nThe constructor is a special type of method that is used to create and initialize an object. In Java, a constructor is a method that has the same name as the class and is used to create an instance of the class. A constructor can take arguments, which are used to initialize the object’s attributes, or properties.\nThe state of an object refers to the values of its attributes at a given moment in time.\nThe behavior of an object refers to the actions or operations that it can perform. In Java, the behavior of an object is defined by its methods, which are functions that are associated with the object and can be called to perform actions on the object.\n\nOverall, a constructor, state, and behavior are important concepts in OOP and are closely related.\nA constructor is used to create and initialize an object, and its state and behavior are defined by its attributes and methods, respectively. In Java SE, these concepts are central to the creation and use of objects, and are fundamental to the flexibility and power of the Java language."
   },
   {
+    "objectID": "javase/sescope.html",
+    "href": "javase/sescope.html",
+    "title": "Java SE: Scope",
+    "section": "",
+    "text": "In Java, the scope of a variable refers to the parts of the program where the variable is accessible. A variable has a certain scope based on where it is declared, and the scope of a variable determines where in the program the variable can be used and accessed.\nThere are three main types of scope in Java:\n\nClass scope: A variable that is declared within a class, but outside of any method, has class scope, which means that it can be accessed and used by any method within the class.\nMethod scope: A variable that is declared within a method has method scope, which means that it can only be accessed and used within that method.\nLocal scope: A variable that is declared within a block of code, such as within a loop or an if statement, has local scope, which means that it can only be accessed and used within that block of code."
+  },
+  {
+    "objectID": "javase/sescope.html#global-scope-in-java",
+    "href": "javase/sescope.html#global-scope-in-java",
+    "title": "Java SE: Scope",
+    "section": "Global scope in Java?",
+    "text": "Global scope in Java?\nIn Java, there is no concept of global scope in the traditional sense. In other programming languages, global variables are variables that are declared outside of any function or class, and are accessible and usable by any part of the program. In Java, however, there is no way to declare a variable outside of a class or method, so there are no global variables in the strict sense of the term.\nInstead, in Java, the closest equivalent to global scope is class scope. In Java, a variable that is declared within a class, but outside of any method, has class scope, which means that it can be accessed and used by any method within the class.\nHere is an example of class scope in Java:\npublic class Example {\n    // Class variable\n    static int classVariable = 1;\n\n    public static void main(String[] args) {\n        // Print class variable\n        System.out.println(classVariable); // Output: 1\n\n        // Call method\n        someMethod();\n    }\n\n    public static void someMethod() {\n        // Print class variable\n        System.out.println(classVariable); // Output: 1\n    }\n}\nIn this example, the classVariable variable is declared within the Example class, but outside of any method, so it has class scope. This means that the classVariable variable can be accessed and used by any method within the Example class, including the main method and the someMethod method.\nWhile Java doesn’t have a concept of global scope in the traditional sense, class scope provides a similar level of accessibility and usability for variables. By declaring variables within a class, but outside of any method, you can make those variables accessible and usable by any method within the class, which can be useful for sharing data and state between different parts of your program."
+  },
+  {
+    "objectID": "javase/sescope.html#key-concept-curly-brackets",
+    "href": "javase/sescope.html#key-concept-curly-brackets",
+    "title": "Java SE: Scope",
+    "section": "Key-concept: curly brackets",
+    "text": "Key-concept: curly brackets\n\n📘 Curly brackets are the key\nIn Java, the scope of a variable is determined by the position of the variable’s declaration within the code, and specifically by the presence or absence of curly braces {}.\n\n\n\nA variable that is declared outside of any curly braces has global or class scope, depending on where it is declared.\nA variable that is declared within a pair of curly braces has local scope, which means that it can only be accessed and used within those curly braces.\n\nHere is an example of how scope works in Java based on the position of the variable’s declaration within curly braces:\npublic class Example {\n    // Global or class scope\n    static int globalOrClassVariable = 1;\n\n    public static void main(String[] args) {\n        // Local scope\n        {\n            int localVariable = 2;\n\n            // Print local variable\n            System.out.println(localVariable); // Output: 2\n        }\n\n        // Print global or class variable\n        System.out.println(globalOrClassVariable); // Output: 1\n\n        // Print local variable (not accessible outside of curly braces)\n        // System.out.println(localVariable); // Error: localVariable cannot be resolved\n    }\n}\nIn this example, the globalOrClassVariable variable is declared outside of any curly braces, so it has global or class scope, depending on where it is declared. The localVariable variable, on the other hand, is declared within a pair of curly braces, so it has local scope and can only be accessed and used within those curly braces.\nAs this example illustrates, the position of a variable’s declaration within curly braces is a key factor in determining the variable’s scope in Java."
+  },
+  {
+    "objectID": "javase/sescope.html#conclusion",
+    "href": "javase/sescope.html#conclusion",
+    "title": "Java SE: Scope",
+    "section": "Conclusion",
+    "text": "Conclusion\nBy understanding how scope works in Java, you can effectively manage the visibility and accessibility of your variables, and avoid common pitfalls such as variable shadowing and scope-related errors."
+  },
+  {
     "objectID": "javase/sesingleton.html",
     "href": "javase/sesingleton.html",
-    "title": "Java Design-patterns: Singleton",
+    "title": "Java Patterns: Singleton",
     "section": "",
     "text": "The singleton pattern is a design pattern in computer programming and Java that is used to restrict the instantiation of a class to one “single” instance.\n\n\nThis is useful when you want to make sure that only one object of a particular class is created, because this can be helpful for managing resources and ensuring that your program is running as efficiently as possible.\nIn Java, the singleton pattern can be implemented by creating a private constructor for the class, which prevents other objects from creating instances of the class.\nThe class also typically provides a static method that allows other classes to access the single instance of the class, which is created the first time the static method is called. This ensures that only one instance of the class is created, and that all other classes can access this instance easily.\n\n\n\nSingleton Pattern"
   },
   {
     "objectID": "javase/sesingleton.html#example-logger",
     "href": "javase/sesingleton.html#example-logger",
-    "title": "Java Design-patterns: Singleton",
+    "title": "Java Patterns: Singleton",
     "section": "Example: Logger",
     "text": "Example: Logger\nHere is an example of a singleton class in Java, using a Logger class as an example:\npublic class Logger {\n    // Private static instance of the class\n    private static Logger instance = null;\n\n    // Private instance variable\n    private PrintWriter writer;\n\n    // Private constructor\n    private Logger() {\n        try {\n            writer = new PrintWriter(\"log.txt\", \"UTF-8\");\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n\n    // Public static method for accessing the instance\n    public static Logger getInstance() {\n        if (instance == null) {\n            instance = new Logger();\n        }\n        return instance;\n    }\n\n    // Public method for logging a message\n    public void log(String message) {\n        writer.println(message);\n    }\n\n    // Public method for closing the log file\n    public void close() {\n        writer.close();\n    }\n}\nIn this example, the Logger class defines a Logger() constructor that is private. This means that instances of the Logger class can only be created from within the Logger class itself.\nThe Logger class also defines a getInstance() method, which is marked as public and static. This method is used to access the instance of the Logger class, and to create the instance if it does not already exist.\nBecause the Logger class is a singleton, there can only be one instance of the class at any given time. This means that all instances of the Logger class share the same instance of the writer field, which is used to write messages to the log file.\nOverall, this example shows how the singleton pattern can be used to implement a Logger class in Java, which ensures that there is only one instance of the Logger class, and provides a global point of access to that instance. This allows the Logger class to manage shared resources, such as the log file, in a more efficient and effective way."
   },
   {
     "objectID": "javase/sesingleton.html#example-configurationmanager",
     "href": "javase/sesingleton.html#example-configurationmanager",
-    "title": "Java Design-patterns: Singleton",
+    "title": "Java Patterns: Singleton",
     "section": "Example: ConfigurationManager",
     "text": "Example: ConfigurationManager\nHere is another example of a singleton class in Java, using a ConfigurationManager class as an example:\npublic class ConfigurationManager {\n    // Private static instance of the class\n    private static ConfigurationManager instance = null;\n\n    // Private instance variables\n    private Properties config;\n\n    // Private constructor\n    private ConfigurationManager() {\n        try {\n            config = new Properties();\n            config.load(new FileInputStream(\"config.properties\"));\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n\n    // Public static method for accessing the instance\n    public static ConfigurationManager getInstance() {\n        if (instance == null) {\n            instance = new ConfigurationManager();\n        }\n        return instance;\n    }\n\n    // Public method for getting a configuration property\n    public String getProperty(String key) {\n        return config.getProperty(key);\n    }\n}\nIn this example, the ConfigurationManager class defines a ConfigurationManager() constructor that is private. This means that instances of the ConfigurationManager class can only be created from within the ConfigurationManager class itself.\nThe ConfigurationManager class also defines a getInstance() method, which is marked as public and static. This method is used to access the instance of the ConfigurationManager class, and to create the instance if it does not already exist.\nBecause the ConfigurationManager class is a singleton, there can only be one instance of the class at any given time. This means that all instances of the ConfigurationManager class share the same instance of the config field, which is used to store the configuration properties.\nOverall, this example shows how the singleton pattern can be used to implement a ConfigurationManager class in Java, which ensures that there is only one instance of the ConfigurationManager class, and provides a global point of access to that instance. This allows the ConfigurationManager class to manage shared resources, such as the configuration properties, in a more efficient and effective way."
   },
