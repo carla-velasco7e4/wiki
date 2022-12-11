@@ -359,7 +359,7 @@ cookieconsent.run({
   <li><a href="#approach-1-md-css" id="toc-approach-1-md-css" class="nav-link" data-scroll-target="#approach-1-md-css">Approach #1: MD + CSS</a></li>
   <li><a href="#approach-2-html-css" id="toc-approach-2-html-css" class="nav-link" data-scroll-target="#approach-2-html-css">Approach #2: HTML + CSS</a></li>
   <li><a href="#approach-3-html-css-js" id="toc-approach-3-html-css-js" class="nav-link" data-scroll-target="#approach-3-html-css-js">Approach #3: HTML + CSS + JS</a></li>
-  <li><a href="#approach-4-if-it-is-able-to-import-mdreadme" id="toc-approach-4-if-it-is-able-to-import-mdreadme" class="nav-link" data-scroll-target="#approach-4-if-it-is-able-to-import-mdreadme">Approach #4: if it is able to import MDReadme</a></li>
+  <li><a href="#approach-4-import-mdreadme" id="toc-approach-4-import-mdreadme" class="nav-link" data-scroll-target="#approach-4-import-mdreadme">Approach #4: import MDReadme?</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/markup/markuphtmlrelation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -636,12 +636,12 @@ Markdown callouts with calls to CSS classes
 </section>
 <section id="approach-2-html-css" class="level3">
 <h3 class="anchored" data-anchor-id="approach-2-html-css">Approach #2: HTML + CSS</h3>
-<p><a href="../markup/mulab1.html">Lab statement on Lab#01-1: Create and publish by Quarto</a></p>
+<p><a href="../markup/mulab1.html">Lab statement on Lab#MD01-1: Create and publish by Quarto</a></p>
 </section>
 <section id="approach-3-html-css-js" class="level3">
 <h3 class="anchored" data-anchor-id="approach-3-html-css-js">Approach #3: HTML + CSS + JS</h3>
 <p>From <code>w3.css</code>: <a href="https://www.w3schools.com/w3css/w3css_tabulators.asp">W3.CSS Navigation Tabs</a></p>
-<p><a href="../javase/selab1-2.html">Lab statement on Lab#02-2: Maven/Gradle Person and Account stored in JSON</a></p>
+<p><a href="../javase/selab1-2.html">Lab statement on Lab#SE01-2: Maven/Gradle Person and Account stored in JSON</a></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">openLab</span>(evt<span class="op">,</span> labStep) {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> i<span class="op">,</span> tabcontent<span class="op">,</span> tablinks<span class="op">;</span></span>
@@ -658,8 +658,8 @@ Markdown callouts with calls to CSS classes
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="approach-4-if-it-is-able-to-import-mdreadme" class="level3">
-<h3 class="anchored" data-anchor-id="approach-4-if-it-is-able-to-import-mdreadme">Approach #4: if it is able to import MDReadme</h3>
+<section id="approach-4-import-mdreadme" class="level3">
+<h3 class="anchored" data-anchor-id="approach-4-import-mdreadme">Approach #4: import MDReadme?</h3>
 <p><a href="https://docs.readme.com/rdmd/docs/code-blocks">Code Blocks</a></p>
 <p><strong>Syntax</strong></p>
 <p>We offer both classic single code blocks, as well as a tabbed interface for displaying multiple code blocks concisely! These are written nearly identically to a series of vanilla markdown code snippets, except for their distinct lack of an additional line break separating each subsequent block:</p>
@@ -675,6 +675,24 @@ Markdown callouts with calls to CSS classes
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-tabs</span>: <span class="cn">#c6b8dd</span><span class="op">;</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-code-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+How to import that feature <strong>Navigate by Tabs</strong> into <strong>Quarto</strong>?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This could work but it has been NOT tested:</p>
+<ul>
+<li>You could convert Readme Markdown to Quarto Markdown, using a tool like Markdown Converter (<a href="https://markdown.pioul.fr/" class="uri">https://markdown.pioul.fr/</a>), which supports both flavors of Markdown.</li>
+<li>Or Markdowon Parser form <strong>Flexmark</strong> Java library</li>
+</ul>
+<p>In any case, they are not <strong>Extensions</strong> within Quarto … so, for now, there is NOT an easy and direct solution to do this conversion.</p>
+</div>
+</div>
 
 
 </section>
