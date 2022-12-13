@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>albertprofe wiki - Java SE: Coupling/Cohesion</title>
+<title>albertprofe wiki - Java SE: JUnit and TDD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -216,7 +216,7 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Java SE: Coupling/Cohesion</h1>
+      <h1 class="quarto-secondary-nav-title">Java SE: JUnit and TDD</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -274,7 +274,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../javase/se-concepts-tdd.html" class="sidebar-item-text sidebar-link">Java SE: JUnit and TDD</a>
+  <a href="../javase/se-concepts-tdd.html" class="sidebar-item-text sidebar-link active">Java SE: JUnit and TDD</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,7 +294,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../javase/se-concepts-coupling.html" class="sidebar-item-text sidebar-link active">Java SE: Coupling/Cohesion</a>
+  <a href="../javase/se-concepts-coupling.html" class="sidebar-item-text sidebar-link">Java SE: Coupling/Cohesion</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -437,18 +437,18 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#key-concept" id="toc-key-concept" class="nav-link active" data-scroll-target="#key-concept">Key-concept</a></li>
-  <li><a href="#example-carfactory" id="toc-example-carfactory" class="nav-link" data-scroll-target="#example-carfactory">Example: <code>CarFactory</code></a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#junit-unit-test" id="toc-junit-unit-test" class="nav-link active" data-scroll-target="#junit-unit-test">JUnit: unit test</a></li>
+  <li><a href="#tdd" id="toc-tdd" class="nav-link" data-scroll-target="#tdd">TDD</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/javase/se-concepts-coupling.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/javase/se-concepts-tdd.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Java SE: Coupling/Cohesion</h1>
+<h1 class="title d-none d-lg-block">Java SE: JUnit and TDD</h1>
 </div>
 
 
@@ -464,52 +464,75 @@ cookieconsent.run({
 </header>
 
 <div class="summary">
-<p>📘 <strong>Coupling/coherence</strong></p>
-<p><strong>Coupling</strong> refers to the degree to which one class or module depends on another class or module.</p>
-<p><strong>High/tight coupling</strong> means that one class or module depends heavily on another class or module, while <strong>low/loose coupling</strong> means that one class or module has minimal dependencies on other classes or modules.</p>
+<p>📘 <strong>JUnit</strong></p>
+<p><strong>JUnit is a unit testing framework for the Java programming language</strong>. It is used to write and run repeatable tests for Java code. JUnit provides a set of <strong>annotations</strong> and <strong>assertions</strong> that make it easy to write and run tests, as well as a simple framework for organizing and running tests.</p>
 </div>
 <hr>
-<p>Coupling and decoupling are fundamental in modern Java applied to <strong>microservices</strong>.</p>
-<p><strong>Coupling</strong> refers to the degree of dependence, <strong>decoupling</strong>, on the other hand, refers to the process of <mark>reducing the degree of coupling between different classes or modules in a system</mark>. By decoupling classes or modules, you can make the system <strong>more modular, scalable, flexible, and maintainable</strong>.</p>
-<section id="key-concept" class="level2">
-<h2 class="anchored" data-anchor-id="key-concept">Key-concept</h2>
-<p>The <strong>importance of decoupling</strong> in Java lies in its ability to improve the modularity, flexibility, and maintainability of a system. When classes or modules <mark>are highly coupled, changes to one class or module can have a cascading effect on other classes or modules, which can make the system difficult to modify and maintain<mark>. By decoupling classes or modules, you can <strong>reduce</strong> the dependencies between them, which can make the system more modular and easier to modify and maintain.</mark></mark></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/CouplingVsCohesion.svg" class="img-fluid figure-img" style="width:50.0%"></p>
-<p></p><figcaption class="figure-caption">Coupling and cohesion by Евгений Мирошниченко, CC0, <a href="https://commons.wikimedia.org/wiki/File:CouplingVsCohesion.svg">via Wikimedia Commons</a></figcaption><p></p>
-</figure>
+<div class="summary">
+<p>📘 <strong>TDD: Test Driven Domain</strong></p>
+<p><strong>Test-driven development (TDD)</strong> is a software development process in which <strong>tests are written for a piece of code before the code itself is written</strong>.</p>
+<p>This approach to development is designed to ensure that the code meets the requirements and works as intended. TDD involves writing a test for a feature, running the test to see if it fails, writing the code to implement the feature, and then running the test again to ensure that it passes. This process is then repeated for each feature until the code is complete.</p>
+<p>TDD is often used in <strong>agile software development</strong>, as it allows for the rapid development of <strong>high-quality code</strong>*.</p>
 </div>
-<p>Additionally, decoupling can help to improve the reusability of classes or modules. When classes or modules are <mark>highly coupled, it can be difficult to reuse them in other contexts or situations</mark>. By <strong>decoupling</strong> classes or modules, you can make them more self-contained and independent, which can make them more easily reusable in other contexts.</p>
-</section>
-<section id="example-carfactory" class="level2">
-<h2 class="anchored" data-anchor-id="example-carfactory">Example: <code>CarFactory</code></h2>
-<p>Here is an example of decoupling in Java, using a <code>CarFactory</code> class to create different types of cars:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CarFactory <span class="op">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Private constructor to prevent instantiation</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="fu">CarFactory</span><span class="op">()</span> <span class="op">{</span> <span class="op">}</span></span>
+<hr>
+<section id="junit-unit-test" class="level2">
+<h2 class="anchored" data-anchor-id="junit-unit-test">JUnit: unit test</h2>
+<p>Link: <a href="https://junit.org/junit5/">Junit</a> and <a href="https://junit.org/junit5/docs/current/user-guide/">User guide</a></p>
+<p>Unit tests are the smallest elements in the test automation process. With the help of unit tests, the developer can check the business logic of any class. So JUnit plays a vital role in the development of a test-driven development framework.</p>
+<p>The following example provides a glimpse at the minimum requirements for writing a test in JUnit Jupiter. Subsequent sections of this chapter will provide further details on all available features.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">static</span><span class="im"> org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Assertions</span><span class="op">.</span><span class="im">assertEquals</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">example</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Calculator</span><span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Factory method for creating cars</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> Car <span class="fu">createCar</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">switch</span> <span class="op">(</span>type<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">"sedan"</span><span class="op">:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Sedan</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="dv">2019</span><span class="op">);</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">"hatchback"</span><span class="op">:</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="kw">new</span> <span class="fu">Hatchback</span><span class="op">(</span><span class="st">"Honda"</span><span class="op">,</span> <span class="st">"Fit"</span><span class="op">,</span> <span class="dv">2019</span><span class="op">);</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">"suv"</span><span class="op">:</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="kw">new</span> <span class="fu">SUV</span><span class="op">(</span><span class="st">"Jeep"</span><span class="op">,</span> <span class="st">"Grand Cherokee"</span><span class="op">,</span> <span class="dv">2019</span><span class="op">);</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="kw">default</span><span class="op">:</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">IllegalArgumentException</span><span class="op">(</span><span class="st">"Invalid car type: "</span> <span class="op">+</span> type<span class="op">);</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this example, the <code>CarFactory</code> class defines a <code>createCar()</code> method, which is marked as <code>public</code> and <code>static</code>. This method is the factory method, which is responsible for creating objects of the <code>Car</code> type. The <code>createCar()</code> method takes a <code>type</code> parameter, which specifies the type of car to create, and returns an instance of the appropriate concrete class.</p>
-<p>By decoupling the <code>CarFactory</code> class from the code that uses the cars, you can make the code that uses the cars more flexible and reusable. For example, you could define a <code>CarDriver</code> class that takes a <code>Car</code> object as a parameter, and uses the <code>Car</code> object to drive the car. Because the <code>CarDriver</code> class doesn’t depend on the <code>CarFactory</code> class, you can use the <code>CarDriver</code> class to drive any type of car, regardless of how the car was created.</p>
-<p>Additionally, by decoupling the <code>CarFactory</code> class from the code that uses the cars, you can make the logic for creating the cars more modular and maintainable. For example, if you want to add a new type of car, such as a truck, you can simply add a new <code>Truck</code> class that extends the <code>Car</code> class, and then update the <code>CarFactory</code> class to include logic for creating instances of the <code>Truck</code> class. Because the <code>CarFactory</code> class is decoupled from the code that uses the cars, you don’t have to change any other code in the system in order to add the new car type.</p>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Test</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyFirstJUnitJupiterTests <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> Calculator calculator <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Test</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">addition</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> calculator<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">));</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Overall, decoupling is an important concept in Java programming, and can help to improve the modularity, flexibility, and maintainability of a system. By reducing the dependencies between classes or modules, you can make the system more modular and easier to modify and maintain, and you can improve the reusability of individual classes or modules.</p>
+<section id="tdd" class="level2">
+<h2 class="anchored" data-anchor-id="tdd">TDD</h2>
+<p><mark>Test-driven development is a development technique where the developer must first write a test that fails before writing a new functional code&lt;</mark>. It ensures a proven way to ensure effective unit testing; however, it does not replace traditional testing. We believe that TDD is an excellent practice that all software developers should consider during the development process.</p>
+<p>Steps for the same are given below:</p>
+<ol type="1">
+<li>Firstly, add a test.</li>
+<li>Run all the tests and see if any new test fails.</li>
+<li>Update the code to make it pass the new tests.</li>
+<li>Rerun the test and if they fail, then refactor again and repeat.</li>
+</ol>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Here is an example of how TDD could be applied in a Java project using JUnit. Let’s say we are building a class that represents a simple calculator. We want the calculator to have methods for adding, subtracting, multiplying, and dividing two numbers.</p>
+<p>First, we would write a test for the add method, which should take two numbers as arguments and return their sum. Here is an example of how this test might look using JUnit:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorTest <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Test</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testAdd</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    Calculator calc <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> result <span class="op">=</span> calc<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> result<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, we would run the test to see if it fails. Since we have not yet implemented the add method, the test should fail with a message indicating that the add method is not yet implemented.</p>
+<p>Next, we would write the code for the add method. Here is an example of how this method might look:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Calculator <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">double</span> <span class="fu">add</span><span class="op">(</span><span class="dt">double</span> a<span class="op">,</span> <span class="dt">double</span> b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, we would run the test again to ensure that it passes. If the test passes, we know that the add method is working correctly and we can move on to the next feature. We would repeat this process for each of the calculator’s methods, writing a test for each one, implementing the code, and then running the test to ensure it passes.</p>
+<p>This is just one example of how TDD can be applied in a Java project using JUnit. There are many other ways to approach TDD, and the specific steps and details will vary depending on the project and the requirements.</p>
 
 
 </section>
