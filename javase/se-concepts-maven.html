@@ -374,7 +374,9 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#maven-repository" id="toc-maven-repository" class="nav-link active" data-scroll-target="#maven-repository">Maven Repository</a></li>
+  <li><a href="#dependency-management" id="toc-dependency-management" class="nav-link active" data-scroll-target="#dependency-management">Dependency Management</a></li>
+  <li><a href="#maven" id="toc-maven" class="nav-link" data-scroll-target="#maven">Maven</a></li>
+  <li><a href="#maven-central-repository" id="toc-maven-central-repository" class="nav-link" data-scroll-target="#maven-central-repository">Maven Central Repository</a></li>
   <li><a href="#maven-lifecycle" id="toc-maven-lifecycle" class="nav-link" data-scroll-target="#maven-lifecycle">Maven Lifecycle</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/javase/se-concepts-maven.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -404,11 +406,20 @@ cookieconsent.run({
 <p><strong>Apache Maven is a software project management</strong> and comprehension tool. Based on the concept of a <strong>project object model (POM)</strong>, Maven can manage a project’s build, reporting and documentation from a central piece of information.</p>
 </div>
 <hr>
+<section id="dependency-management" class="level2">
+<h2 class="anchored" data-anchor-id="dependency-management">Dependency Management</h2>
+<p>A <strong>dependency manager</strong> is a tool that helps manage the dependencies in a software project. Dependencies are <strong>external libraries or frameworks that a project relies on in order to function properly</strong>. A dependency manager makes it <strong>easier</strong> for a developer to <strong>manage and organize</strong> the dependencies in their project, and can help with tasks such as <strong>downloading, installing, and updating dependencies</strong>.</p>
+<p>Some examples of dependency managers include <code>npm</code> for JavaScript projects, <code>pip</code> for Python projects, and <code>Maven</code> for Java projects.</p>
+<p>These tools allow developers to specify the dependencies for their project in a file, and then automatically handle the process of downloading and installing those dependencies. This can save a lot of time and effort for developers, and helps ensure that all of the necessary dependencies are present and up-to-date in a project.</p>
+</section>
+<section id="maven" class="level2">
+<h2 class="anchored" data-anchor-id="maven">Maven</h2>
 <p>Maven is a <strong>build automation tool</strong> used primarily for Java projects.</p>
 <p><a href="https://maven.apache.org/">Maven</a> can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. The Maven project is hosted by the <strong>Apache Software Foundation</strong>, where it was formerly part of the Jakarta Project.</p>
 <p>Maven addresses two aspects of building software: - how software is built and - its dependencies</p>
-<section id="maven-repository" class="level2">
-<h2 class="anchored" data-anchor-id="maven-repository">Maven Repository</h2>
+</section>
+<section id="maven-central-repository" class="level2">
+<h2 class="anchored" data-anchor-id="maven-central-repository">Maven Central Repository</h2>
 <p>Link: <a href="https://mvnrepository.com/">Maven Central Repository</a></p>
 <p><mark>Maven repository is a directory where all the dependencies such as jars, library files, plugins, or other artifacts that will be required by the projects are stored</mark>.</p>
 <p>These repositories help us to store and maintain useful resources so that they can be used in our maven projects while building and deploying the artifacts.</p>
@@ -433,7 +444,7 @@ cookieconsent.run({
 <li><code>deploy</code>: Deploy the packaged code to a remote repository for others to use.</li>
 </ul>
 <p>Each build phase consists of a set of build goals, which are the specific tasks that are executed to accomplish the phase’s objectives. For example, the compile phase has a build goal called compiler:compile that is responsible for compiling the project’s source code.</p>
-<p>By following the defined Maven lifecycle, developers can easily build, test, and distribute their Java projects in a consistent and repeatable manner.</p>
+<p>By following the defined Maven lifecycle, developers can <strong>easily build, test, and distribute their Java projects in a consistent and repeatable manner</strong>.</p>
 
 
 </section>

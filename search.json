@@ -613,7 +613,7 @@
     "href": "about/aboutimagescredit.html",
     "title": "About images credit",
     "section": "",
-    "text": "Images list\n\nOOP principles: www.nerd.vision1\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg2\nSingleton Design Pattern: Singleton Design Pattern3\n\nHow to write notes with .qmd Quarto Markdown\n\n\n\n\n\nFootnotes\n\n\nrandom web, just crediting the image↩︎\nvery useful and recommended resource↩︎\nrandom web, just crediting the image↩︎"
+    "text": "Images list\n\nOOP principles: www.nerd.vision1\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg2\nSingleton Design Pattern: Singleton Design Pattern3\nGet Java for desktop applications: Java / Download Java / What is Java technology and why do I need it?4\n\nHow to write notes with .qmd Quarto Markdown\n\n\n\n\n\nFootnotes\n\n\nrandom web, just crediting the image↩︎\nvery useful and recommended resource↩︎\nrandom web, just crediting the image↩︎\ninteresting web↩︎"
   },
   {
     "objectID": "about/aboutme.html",
@@ -1005,7 +1005,7 @@
     "href": "javase/se-concepts-tdd.html#junit-unit-test",
     "title": "Java SE: JUnit and TDD",
     "section": "JUnit: unit test",
-    "text": "JUnit: unit test\nLink: Junit and User guide\nUnit tests are the smallest elements in the test automation process. With the help of unit tests, the developer can check the business logic of any class. So JUnit plays a vital role in the development of a test-driven development framework.\nThe following example provides a glimpse at the minimum requirements for writing a test in JUnit Jupiter. Subsequent sections of this chapter will provide further details on all available features.\nimport static org.junit.jupiter.api.Assertions.assertEquals;\n\nimport example.util.Calculator;\n\nimport org.junit.jupiter.api.Test;\n\nclass MyFirstJUnitJupiterTests {\n\n    private final Calculator calculator = new Calculator();\n\n    @Test\n    void addition() {\n        assertEquals(2, calculator.add(1, 1));\n    }\n\n}"
+    "text": "JUnit: unit test\nLink: Junit and User guide\nUnit tests are the smallest elements in the test automation process. With the help of unit tests, the developer can check the business logic of any class. So JUnit plays a vital role in the development of a test-driven development framework.\nThe following example provides a glimpse at the minimum requirements for writing a test in JUnit Jupiter. Subsequent sections of this chapter will provide further details on all available features.\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport example.util.Calculator;\nimport org.junit.jupiter.api.Test;\n\nclass MyFirstJUnitJupiterTests {\n\n    private final Calculator calculator = new Calculator();\n\n    @Test\n    void addition() {\n        assertEquals(2, calculator.add(1, 1));\n    }\n\n}"
   },
   {
     "objectID": "javase/se-concepts-tdd.html#tdd",
@@ -1020,6 +1020,13 @@
     "title": "Java SE: JUnit and TDD",
     "section": "Example",
     "text": "Example\nHere is an example of how TDD could be applied in a Java project using JUnit. Let’s say we are building a class that represents a simple calculator. We want the calculator to have methods for adding, subtracting, multiplying, and dividing two numbers.\nFirst, we would write a test for the add method, which should take two numbers as arguments and return their sum. Here is an example of how this test might look using JUnit:\npublic class CalculatorTest {\n\n  @Test\n  public void testAdd() {\n    Calculator calc = new Calculator();\n    double result = calc.add(2, 3);\n    assertEquals(5, result, 0);\n  }\n\n}\nNext, we would run the test to see if it fails. Since we have not yet implemented the add method, the test should fail with a message indicating that the add method is not yet implemented.\nNext, we would write the code for the add method. Here is an example of how this method might look:\npublic class Calculator {\n\n  public double add(double a, double b) {\n    return a + b;\n  }\n\n}\nFinally, we would run the test again to ensure that it passes. If the test passes, we know that the add method is working correctly and we can move on to the next feature. We would repeat this process for each of the calculator’s methods, writing a test for each one, implementing the code, and then running the test to ensure it passes.\nThis is just one example of how TDD can be applied in a Java project using JUnit. There are many other ways to approach TDD, and the specific steps and details will vary depending on the project and the requirements."
+  },
+  {
+    "objectID": "javase/se-concepts-tdd.html#naming-the-test-class",
+    "href": "javase/se-concepts-tdd.html#naming-the-test-class",
+    "title": "Java SE: JUnit and TDD",
+    "section": "Naming the test class",
+    "text": "Naming the test class\nWe use common conventions in naming the test class. Let’s start with the name of the class which is being tested and assume the name of that class is Student. In that case, the name of the test class should be StudentTest. We have to append Test to it. The same naming convention is used in the case of methods. If there is a method DisplayStudentAddress(), then the name of the method in testing should be testDisplayStudentAddress().\n\n\n\nNaming in Production\nNaming in Testing\n\n\n\n\nStudent\nStudentTest\n\n\nDisplayStudentAddress()\ntestDisplayStudentAddress()"
   },
   {
     "objectID": "javase/se-principles-inheritance.html",
@@ -1285,14 +1292,28 @@
     "href": "javase/se-concepts-maven.html",
     "title": "Java SE: Maven",
     "section": "",
-    "text": "📘 Dependency Management: Maven\nApache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information.\nMaven is a build automation tool used primarily for Java projects.\nMaven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. The Maven project is hosted by the Apache Software Foundation, where it was formerly part of the Jakarta Project.\nMaven addresses two aspects of building software: - how software is built and - its dependencies"
+    "text": "📘 Dependency Management: Maven\nApache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information."
   },
   {
-    "objectID": "javase/se-concepts-maven.html#maven-repository",
-    "href": "javase/se-concepts-maven.html#maven-repository",
+    "objectID": "javase/se-concepts-maven.html#dependency-management",
+    "href": "javase/se-concepts-maven.html#dependency-management",
     "title": "Java SE: Maven",
-    "section": "Maven Repository",
-    "text": "Maven Repository\nLink: Maven Central Repository\nMaven repository is a directory where all the dependencies such as jars, library files, plugins, or other artifacts that will be required by the projects are stored.\nThese repositories help us to store and maintain useful resources so that they can be used in our maven projects while building and deploying the artifacts.\nAll the layout and structure of the underlying repositories of maven of any type are completely hidden for maven users."
+    "section": "Dependency Management",
+    "text": "Dependency Management\nA dependency manager is a tool that helps manage the dependencies in a software project. Dependencies are external libraries or frameworks that a project relies on in order to function properly. A dependency manager makes it easier for a developer to manage and organize the dependencies in their project, and can help with tasks such as downloading, installing, and updating dependencies.\nSome examples of dependency managers include npm for JavaScript projects, pip for Python projects, and Maven for Java projects.\nThese tools allow developers to specify the dependencies for their project in a file, and then automatically handle the process of downloading and installing those dependencies. This can save a lot of time and effort for developers, and helps ensure that all of the necessary dependencies are present and up-to-date in a project."
+  },
+  {
+    "objectID": "javase/se-concepts-maven.html#maven",
+    "href": "javase/se-concepts-maven.html#maven",
+    "title": "Java SE: Maven",
+    "section": "Maven",
+    "text": "Maven\nMaven is a build automation tool used primarily for Java projects.\nMaven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. The Maven project is hosted by the Apache Software Foundation, where it was formerly part of the Jakarta Project.\nMaven addresses two aspects of building software: - how software is built and - its dependencies"
+  },
+  {
+    "objectID": "javase/se-concepts-maven.html#maven-central-repository",
+    "href": "javase/se-concepts-maven.html#maven-central-repository",
+    "title": "Java SE: Maven",
+    "section": "Maven Central Repository",
+    "text": "Maven Central Repository\nLink: Maven Central Repository\nMaven repository is a directory where all the dependencies such as jars, library files, plugins, or other artifacts that will be required by the projects are stored.\nThese repositories help us to store and maintain useful resources so that they can be used in our maven projects while building and deploying the artifacts.\nAll the layout and structure of the underlying repositories of maven of any type are completely hidden for maven users."
   },
   {
     "objectID": "javase/se-concepts-maven.html#maven-lifecycle",
