@@ -897,6 +897,7 @@ cookieconsent.run({
   <li><a href="#maven" id="toc-maven" class="nav-link" data-scroll-target="#maven">Maven</a></li>
   <li><a href="#maven-central-repository" id="toc-maven-central-repository" class="nav-link" data-scroll-target="#maven-central-repository">Maven Central Repository</a></li>
   <li><a href="#maven-lifecycle" id="toc-maven-lifecycle" class="nav-link" data-scroll-target="#maven-lifecycle">Maven Lifecycle</a></li>
+  <li><a href="#archetype-groupid-artifactid" id="toc-archetype-groupid-artifactid" class="nav-link" data-scroll-target="#archetype-groupid-artifactid">Archetype, GroupId, ArtifactId</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/quarto-dev/quarto-demo/edit/main/javase/se-concepts-maven.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/quarto-dev/quarto-demo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -964,6 +965,14 @@ cookieconsent.run({
 </ul>
 <p>Each build phase consists of a set of build goals, which are the specific tasks that are executed to accomplish the phase’s objectives. For example, the compile phase has a build goal called compiler:compile that is responsible for compiling the project’s source code.</p>
 <p>By following the defined Maven lifecycle, developers can <strong>easily build, test, and distribute their Java projects in a consistent and repeatable manner</strong>.</p>
+</section>
+<section id="archetype-groupid-artifactid" class="level2">
+<h2 class="anchored" data-anchor-id="archetype-groupid-artifactid">Archetype, GroupId, ArtifactId</h2>
+<p>An <strong>archetype is a template for a project</strong>. It provides a predefined <strong>structure and files</strong> for a project, so that you don’t have to create them manually.</p>
+<p>GroupId and artifactId are two important elements of a Maven project.</p>
+<p>The <strong>groupId</strong> is a unique identifier for a project, and is typically used to group related projects together.</p>
+<p>The <strong>artifactId</strong> is the unique identifier for a specific project, and is used to identify the project within the group.</p>
+<p>Together, the groupId and artifactId help to uniquely identify a project within the Maven ecosystem.</p>
 
 
 </section>
