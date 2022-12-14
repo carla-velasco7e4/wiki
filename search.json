@@ -1162,6 +1162,20 @@
     "text": "About this site"
   },
   {
+    "objectID": "javase/se-concepts-createproject.html",
+    "href": "javase/se-concepts-createproject.html",
+    "title": "Java SE: Create Maven Project",
+    "section": "",
+    "text": "To create a Maven project with a standard directory structure using IntelliJ IDEA, you can follow these steps:\n\nInstall the Maven plugin in IntelliJ IDEA.\nOpen IntelliJ IDEA and navigate to the Plugins settings.\nSearch for Maven and install the plugin.\nIn IntelliJ IDEA, click Create New Project.\nIn the New Project dialog, select Maven from the list of project types.\nClick Next and select the **maven-archetype-quickstart archetype**. This archetype creates a standard Maven project with a directory structure for source code and unit tests.\nClick Next and enter the groupId and artifactId for your project. These are used to identify your project uniquely across all projects.\nClick Finish to create the project.\n\nYour project will be created with the following directory structure:\n\nmy-project\n├── pom.xml\n└── src\n    ├── main\n    │   └── java\n    └── test\n        └── java\nThe src/main/java directory is where you should put your Java source code, and the src/test/java directory is where you should put your unit tests.\nTo specify the version of Maven to use, you can edit the pom.xml file and add a  element to the  element. For example:\n<project>\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.example</groupId>\n  <artifactId>my-project</artifactId>\n  <version>3.6.3</version>\n  ...\n</project>\nThis will use version 3.6.3 of Maven for the project."
+  },
+  {
+    "objectID": "javase/se-concepts-createproject.html#step-by-step-screenshots-2022-1214",
+    "href": "javase/se-concepts-createproject.html#step-by-step-screenshots-2022-1214",
+    "title": "Java SE: Create Maven Project",
+    "section": "Step-by-step screenshots (2022-1214)",
+    "text": "Step-by-step screenshots (2022-1214)\nScreenshoots Create Maven Project"
+  },
+  {
     "objectID": "javase/selab1-2.html",
     "href": "javase/selab1-2.html",
     "title": "Lab#SE01-2: Maven/Gradle Person and Account stored in JSON",
@@ -1316,11 +1330,11 @@
     "text": "📘 Dependency Management: Maven\nApache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information."
   },
   {
-    "objectID": "javase/se-concepts-maven.html#dependency-management",
-    "href": "javase/se-concepts-maven.html#dependency-management",
+    "objectID": "javase/se-concepts-maven.html#dependencyse-concepts-maven-maven-for-java-projects.",
+    "href": "javase/se-concepts-maven.html#dependencyse-concepts-maven-maven-for-java-projects.",
     "title": "Java SE: Maven",
-    "section": "Dependency Management",
-    "text": "Dependency Management\nA dependency manager is a tool that helps manage the dependencies in a software project. Dependencies are external libraries or frameworks that a project relies on in order to function properly. A dependency manager makes it easier for a developer to manage and organize the dependencies in their project, and can help with tasks such as downloading, installing, and updating dependencies.\nSome examples of dependency managers include npm for JavaScript projects, pip for Python projects, and Maven for Java projects.\nThese tools allow developers to specify the dependencies for their project in a file, and then automatically handle the process of downloading and installing those dependencies. This can save a lot of time and effort for developers, and helps ensure that all of the necessary dependencies are present and up-to-date in a project."
+    "section": "Dependencyse-concepts-maven Maven for Java projects.",
+    "text": "Dependencyse-concepts-maven Maven for Java projects.\nThese tools allow developers to specify the dependencies for their project in a file, and then automatically handle the process of downloading and installing those dependencies. This can save a lot of time and effort for developers, and helps ensure that all of the necessary dependencies are present and up-to-date in a project."
   },
   {
     "objectID": "javase/se-concepts-maven.html#maven",
