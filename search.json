@@ -415,35 +415,49 @@
   {
     "objectID": "javase/se-concepts-objects.html",
     "href": "javase/se-concepts-objects.html",
-    "title": "Java SE: Objects",
+    "title": "Java SE: Class and Objects",
     "section": "",
-    "text": "from The Java™ Tutorials\nAs you know, a class provides the blueprint for objects; you create an object from a class. Each of the following statements taken from the CreateObjectDemo program creates an object and assigns it to a variable:\nPoint originOne = new Point(23, 94);\nRectangle rectOne = new Rectangle(originOne, 100, 200);\nRectangle rectTwo = new Rectangle(50, 100);\nThe first line creates an object of the Point class, and the second and third lines each create an object of the Rectangle class.\nEach of these statements has three parts (discussed in detail below):\n\nDeclaration: The code set in bold are all variable declarations that associate a variable name with an object type.\nInstantiation: The new keyword is a Java operator that creates the object.\nInitialization: The new operator is followed by a call to a constructor, which initializes the new object."
+    "text": "📘 What is a Java Object\nAn object in Java is a container that holds both data and behavior. The data is represented by the object’s attributes, and the behavior is represented by the methods that operate on those attributes.\nWhen you create an object, you are creating an instance of a class, which is a blueprint or template for the object."
+  },
+  {
+    "objectID": "javase/se-concepts-objects.html#introduction",
+    "href": "javase/se-concepts-objects.html#introduction",
+    "title": "Java SE: Class and Objects",
+    "section": "Introduction",
+    "text": "Introduction\nEach object has its own unique identity, and it maintains its own state by storing the values of its attributes. The object’s behavior is defined by the methods that operate on its attributes, and these methods can be invoked by other code to ask the object to perform a specific action.\nObjects are an essential concept in object-oriented programming, and they are used to model real-world entities in a program. For example, you could create an object to represent a particular person, with attributes such as name, age, and address, and methods that operate on these attributes, such as a method to calculate their age in a particular year.\nIn Java, you can create objects by using the new keyword and the class constructor to allocate memory for the object, and then you can access the object’s attributes and methods by using the . (dot) operator. For example, if you have a class called Person, you could create an object of that class like this:\nPerson carla = new Person();\nAnd then you could access the object’s attributes and methods like this:\nperson.name = \"Carla Whitesand\";\nperson.setAddress(\"123 Main Street\");\nint age = person.calculateAge(2022);\nIn this example, name and setAddress() are attributes and methods of the Person class, and person is an object of that class. You can use this object to store and manipulate data according to the rules defined by the class."
+  },
+  {
+    "objectID": "javase/se-concepts-objects.html#creating-objects",
+    "href": "javase/se-concepts-objects.html#creating-objects",
+    "title": "Java SE: Class and Objects",
+    "section": "Creating Objects",
+    "text": "Creating Objects\nfrom The Java™ Tutorials\nAs you know, a class provides the blueprint for objects; you create an object from a class. Each of the following statements taken from the CreateObjectDemo program creates an object and assigns it to a variable:\nPoint originOne = new Point(23, 94);\nRectangle rectOne = new Rectangle(originOne, 100, 200);\nRectangle rectTwo = new Rectangle(50, 100);\nThe first line creates an object of the Point class, and the second and third lines each create an object of the Rectangle class.\nEach of these statements has three parts (discussed in detail below):\n\nDeclaration: The code set in bold are all variable declarations that associate a variable name with an object type.\nInstantiation: The new keyword is a Java operator that creates the object.\nInitialization: The new operator is followed by a call to a constructor, which initializes the new object."
   },
   {
     "objectID": "javase/se-concepts-objects.html#declaring-a-variable-to-refer-to-an-object",
     "href": "javase/se-concepts-objects.html#declaring-a-variable-to-refer-to-an-object",
-    "title": "Java SE: Objects",
+    "title": "Java SE: Class and Objects",
     "section": "Declaring a Variable to Refer to an Object",
     "text": "Declaring a Variable to Refer to an Object\nPreviously, you learned that to declare a variable, you write:\ntype name;\nThis notifies the compiler that you will use name to refer to data whose type is type. With a primitive variable, this declaration also reserves the proper amount of memory for the variable.\nYou can also declare a reference variable on its own line. For example:\nPoint originOne;\n\n\n\n\n\n\nJust a reference variable: is empty\n\n\n\nIf you declare originOne like this, its value will be undetermined until an object is actually created and assigned to it. Simply declaring a reference variable does not create an object.\n\n\nFor that, you need to use the new operator, as described in the next section. You must assign an object to originOne before you use it in your code. Otherwise, you will get a compiler error.\nA variable in this state, which currently references no object, can be illustrated as follows (the variable name, originOne, plus a reference pointing to nothing):\noriginOne –> null\n\n\n\n“originOne –> null” figure part 1"
   },
   {
     "objectID": "javase/se-concepts-objects.html#instantiating-a-class",
     "href": "javase/se-concepts-objects.html#instantiating-a-class",
-    "title": "Java SE: Objects",
+    "title": "Java SE: Class and Objects",
     "section": "Instantiating a Class",
     "text": "Instantiating a Class\n\n📘 Instantiating a Class\nThe new operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The new operator also invokes the object constructor.\n\n\n\n\n\n\n\nInstantiating a class\n\n\n\nThe phrase “instantiating a class” means the same thing as “creating an object.” When you create an object, you are creating an “instance” of a class, therefore “instantiating” a class.\nThe new operator requires a single, postfix argument: a call to a constructor. The name of the constructor provides the name of the class to instantiate.\n\n\nThe new operator returns a reference to the object it created. This reference is usually assigned to a variable of the appropriate type, like:\nPoint originOne = new Point(23, 94);\noriginOne –> Point object\n\n\n\n“originOne –> Point object” figure part 2\n\n\nThe reference returned by the new operator does not have to be assigned to a variable. It can also be used directly in an expression. For example:\nint height = new Rectangle().height;\nThis statement will be discussed in the next section or you can go here."
   },
   {
     "objectID": "javase/se-concepts-objects.html#initializing-an-object",
     "href": "javase/se-concepts-objects.html#initializing-an-object",
-    "title": "Java SE: Objects",
+    "title": "Java SE: Class and Objects",
     "section": "Initializing an Object",
     "text": "Initializing an Object\nHere’s the code for the Point class:\npublic class Point {\n    public int x = 0;\n    public int y = 0;\n    //constructor\n    public Point(int a, int b) {\n        x = a;\n        y = b;\n    }\n}\nThis class contains a single constructor. You can recognize a constructor because its declaration uses the same name as the class and it has no return type.\nThe constructor in the Point class takes two integer arguments, as declared by the code (int a, int b). The following statement provides 23 and 94 as values for those arguments:\nPoint originOne = new Point(23, 94);"
   },
   {
     "objectID": "javase/se-concepts-objects.html#example-uml-class-and-object",
     "href": "javase/se-concepts-objects.html#example-uml-class-and-object",
-    "title": "Java SE: Objects",
+    "title": "Java SE: Class and Objects",
     "section": "Example UML: class and object",
     "text": "Example UML: class and object\n\n\n\nThe class body may contain member variables, constructors, public methods, private helper methods and others."
   },
@@ -1012,7 +1026,7 @@
     "href": "markup/mulab1.html#step-by-step",
     "title": "Lab#MD01-1: Create and publish by Quarto",
     "section": "Step-by-step",
-    "text": "Step-by-step\n\n\n\nStep-by-step guide to create and publish a Quarto website\n\n\n\nInstallations:\n\nVisual Code\nInstall GitHub Extension and Source Control (maybe the come with Visual Code)\nSign in GitHub in Visual Code (wizard)\nInstall Quarto Extension in Visual Code\nQuarto in your OS (download from Quarto site)\n\nCreate Quarto Project\nGitHub jobs:\n\nCreate repository, commit and push files to repository with Sync tool. To write our repository you need to:\n\nCreate Token on GitHub.com: Creating a personal access token\nUse this token on your Visual Code - Git, link:\n$git config --global user.name \"Mona Lisa\"\n$git config --global user.mail \"monalisa@davinci.com\"\n$git config --global user.paasword \"4WTVEG43_Q34WG435GAWER4_Q4vsrsrggr_3D44\"\n\nActivate gh-pages service\n\nquarto render and quarto publish gh-pages / quarto publish on Visual Code’s terminal\n\nPublish Quarto Project\nImprove your Quarto Project\n\nGo to published web:user/github.io/repo"
+    "text": "Step-by-step\n\n\n\nStep-by-step guide to create and publish a Quarto website\n\n\n\nInstall some software and Sign in:\n\nInstall Visual Code\nInstall GitHub Extension and Source Control if they don’t come with new installation\nInstall Quarto Extension in Visual Code\nSign in GitHub from Visual Code (wizard)\nInstall Quarto in your OS (download from Quarto site - Get started)\n\nCreate Quarto Project\nGitHub tasks:\n\nCreate repository, commit and push files to repository with Sync tool. To write our repository you need to:\n\nCreate Token on GitHub.com: Creating a personal access token\nUse this token on your Visual Code - Git, link:\n$git config --global user.name \"Mona Lisa\"\n$git config --global user.mail \"monalisa@davinci.com\"\n$git config --global user.paasword \"4WTVEG43_Q34WG435GAWER4_Q4vsrsrggr_3D44\"\n\nActivate gh-pages service\n\nquarto render and quarto publish gh-pages / quarto publish on Visual Code’s terminal\n\nPublish Quarto Project\nImprove your Quarto Project\n\nGo to published web:user/github.io/repo"
   },
   {
     "objectID": "markup/mulab1.html#screen-shoots-2022-12-12",
