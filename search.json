@@ -613,7 +613,7 @@
     "href": "about/aboutimagescredit.html",
     "title": "About images credit",
     "section": "",
-    "text": "Images list\n\nOOP principles: www.nerd.vision1\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg2\nSingleton Design Pattern: Singleton Design Pattern3\nGet Java for desktop applications: Java / Download Java / What is Java technology and why do I need it?4\n\nHow to write notes with .qmd Quarto Markdown\n\n\n\n\n\nFootnotes\n\n\nrandom web, just crediting the image↩︎\nvery useful and recommended resource↩︎\nrandom web, just crediting the image↩︎\ninteresting web↩︎"
+    "text": "Images list\n\nOOP principles: www.nerd.vision1\nJava Programming Tutorial Object-oriented Programming (OOP) Basics: www3.ntu.edu.sg2\nSingleton Design Pattern: Singleton Design Pattern3\nGet Java for desktop applications: Java / Download Java / What is Java technology and why do I need it?4\nDriving Augmented Intelligence Test Driven Development (TDD) Tools and Agile Process5\n\nHow to write notes with .qmd Quarto Markdown\n\n\n\n\n\nFootnotes\n\n\nrandom web, just crediting the image↩︎\nvery useful and recommended resource↩︎\nrandom web, just crediting the image↩︎\ninteresting web↩︎\ninteresting web↩︎"
   },
   {
     "objectID": "about/aboutme.html",
@@ -817,6 +817,27 @@
     "title": "Home",
     "section": "And reading books?",
     "text": "And reading books?\nReading books can help improve your skills as a programmer in several ways. Some specific benefits of reading books for programmers include:\n\nExpanding your knowledge: Books can provide a wealth of information on a wide range of topics related to programming. By reading books, you can learn about new technologies, programming languages, and best practices that you may not have been aware of before.\nImproving your problem-solving skills: Many books on programming include examples and exercises that you can use to practice your problem-solving skills. By working through these exercises, you can improve your ability to analyze complex problems and develop effective solutions using code.\nBroadening your perspective: Reading books written by other programmers can provide valuable insights into how they approach problems and solve them. This can help you learn new techniques and strategies that you can apply to your own work.\nBuilding your vocabulary: Many technical books on programming include specialized terminology and concepts that you may not be familiar with. By reading these books, you can expand your vocabulary and become more fluent in the language of programming.\nStaying up-to-date: Reading books can help you keep up with the latest trends and developments in the field of software development. This can help you stay ahead of the curve and ensure that your skills remain relevant and in-demand.\n\nOverall, reading books can be a valuable way to improve your skills as a programmer. By reading books written by experienced programmers, you can learn new techniques and strategies, expand your knowledge, and stay up-to-date with the latest developments in the field."
+  },
+  {
+    "objectID": "linux/linux-what-vm.html",
+    "href": "linux/linux-what-vm.html",
+    "title": "Linux: Virtual Machines",
+    "section": "",
+    "text": "A virtual machine is a software program that emulates the functionality of a physical computer.\nIt allows a computer to run multiple operating systems and applications in isolated environments, providing a level of isolation and security between them.\nThis allows users to run different operating systems and applications on the same physical computer, providing a level of flexibility and convenience that is not possible with a physical computer."
+  },
+  {
+    "objectID": "linux/linux-what-vm.html#what-is-virtualbox",
+    "href": "linux/linux-what-vm.html#what-is-virtualbox",
+    "title": "Linux: Virtual Machines",
+    "section": "What is Virtualbox",
+    "text": "What is Virtualbox\nVirtualBox is a free and open-source virtualization platform that allows users to run multiple operating systems on a single physical computer.\nIt is a type of hypervisor, which means it sits between the physical hardware and the operating system, allowing multiple operating systems to run on the same hardware.\nVirtualBox allows users to create and manage virtual machines, each of which can run a different operating system and be configured with its own virtual hardware. This allows users to run multiple operating systems and applications on the same computer, providing a level of flexibility and convenience that is not possible with a physical computer."
+  },
+  {
+    "objectID": "linux/linux-what-vm.html#step-by-step-linux-mint",
+    "href": "linux/linux-what-vm.html#step-by-step-linux-mint",
+    "title": "Linux: Virtual Machines",
+    "section": "Step-by-step: Linux Mint",
+    "text": "Step-by-step: Linux Mint\nHere are the steps to create a Linux Mint virtual machine using VirtualBox:\n\nDownload and install VirtualBox on your computer.\nStart VirtualBox and click the New button to create a new virtual machine.\nIn the Create Virtual Machine wizard, give your virtual machine a name and select Linux as the operating system type and Mint as the version.\nSelect the amount of memory (RAM) you want to allocate to the virtual machine and click Next.\nSelect Create a virtual hard disk now and click Create.\nIn the Create a virtual hard disk wizard, select VDI (VirtualBox Disk Image) as the disk type and Dynamically allocated as the storage type.\nSelect the location where you want to store the virtual disk and the size of the disk, and click Create.\nClick on the new virtual machine in the list and click the Start button to boot the virtual machine.\nIn the select start-up disk window, select the Linux Mint ISO file that you previously downloaded from Linux Mint 21 “Vanessa” and click Start. 9.1. If not, manually select ISO to Controller:IDE>Optic unit>Choose file\nFollow the on-screen instructions to install Linux Mint on the virtual machine.\nRemove the iso from the Controller:IDE>Optic unit>Choose file.\nOnce the installation is complete, you can use the virtual machine to run Linux Mint and any applications that are compatible with the operating system. You can also customize the virtual machine’s settings and virtual hardware to suit your needs.\nInstall Guest Additions: 13.1. How to Install VirtualBox Guest Additions in Linux Mint 19.1 by Linux Distro Installation Guide"
   },
   {
     "objectID": "linux/linux-what-basics.html",
